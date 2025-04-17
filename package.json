@@ -1,0 +1,14 @@
+{
+  "name": "virgin-booker",
+  "version": "1.0.0",
+  "description": "Automates class bookings on Virgin Active",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "chrissimmonds",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
