@@ -2,7 +2,7 @@ name: Scrape Timetables Daily
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight
+    - cron: '0 0 * * *'  # every day at midnight
 
 jobs:
   scrape:
