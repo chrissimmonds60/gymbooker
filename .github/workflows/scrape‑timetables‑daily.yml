@@ -1,9 +1,16 @@
+# .github/workflows/scrape-timetables-daily.yml
 name: Scrape Timetables Daily
 
+# run on a daily schedule, plus you can trigger it manually
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight
-  workflow_dispatch:    # Allows you to trigger it manually from the Actions UI
+    - cron: '0 0 * * *'  # every day at midnight (UTC)
+  workflow_dispatch:
+
+# Grant the runner the permission to upload/download artifacts
+permissions:
+  contents: read
+  actions: write
 
 jobs:
   scrape:
@@ -13,25 +20,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Use Node.js 14
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
 
-      - name: Run scraper
+      - name: Scrape classes
         run: node list-classes.js
 
-      - name: Upload timetable JSON
-        uses: actions/upload-artifact@v3.1.2
+      - name: Upload JSON
+        uses: actions/upload-artifact@v3
         with:
           name: timetable-json
           path: classes.json
 
-      - name: Download timetable JSON (for further use)
-        uses: actions/download-artifact@v3.1.2
+      - name: Download JSON (for downstream jobs)
+        uses: actions/download-artifact@v3
         with:
           name: timetable-json
           path: downloaded/
