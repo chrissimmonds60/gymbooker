@@ -32,7 +32,7 @@ jobs:
       - name: Run scraper (capture to classes.json)
         run: node list-classes.js > classes.json
 
-      - name: Debug: Show classes.json
+      - name: Debug:Show classes.json
         run: |
           ls -la classes.json
           head -n 20 classes.json
