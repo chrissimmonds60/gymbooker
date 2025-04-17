@@ -40,7 +40,7 @@ jobs:
           head -n 20 classes.json
 
       - name: Upload timetable JSON
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: timetable-json
           path: classes.json
