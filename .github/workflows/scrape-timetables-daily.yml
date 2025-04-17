@@ -23,9 +23,7 @@ jobs:
       - name: Run scraper
         run: node list-classes.js
 
-      - name: Debug: List workspace files
-        run: ls -la
-
+      
       - name: Upload timetable JSON
         uses: actions/upload-artifact@v3
         with:
