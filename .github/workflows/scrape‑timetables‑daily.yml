@@ -1,36 +1,38 @@
-name: Scrape timetables daily
+name: Scrape Timetables Daily
 
-# Run at 00:05 UTC every day
 on:
   schedule:
-    - cron:  '5 0 * * *'
-  workflow_dispatch:  # allows manual trigger
+    - cron: '0 0 * * *'  # Every day at midnight
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    env:
-      VA_USER: ${{ secrets.VA_USER }}
-      VA_PASS: ${{ secrets.VA_PASS }}
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '14'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Scrape timetable JSON
-        run: |
-          node list-classes.js > classes.json
+      - name: Run scraper
+        run: node list-classes.js
 
-      - name: Upload JSON artifact
+      - name: Upload timetable JSON
         uses: actions/upload-artifact@v3
         with:
           name: timetable-json
           path: classes.json
+
+      - name: Download timetable JSON (for further use)
+        uses: actions/download-artifact@v3
+        with:
+          name: timetable-json
+          path: ./downloaded
+
+  # Other jobs can follow here if needed
