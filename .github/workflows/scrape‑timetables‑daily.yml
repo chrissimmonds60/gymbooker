@@ -73,3 +73,24 @@ jobs:
           git add docs/classes.json
           git commit -m "Publish timetable for $(date -I --utc)"
           git push
+      - name: Commit & Push to main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/classes.json
+          git commit -m "Publish timetable for $(date -I --utc)"
+          git push
+
+      # ——— New steps to send your silent push ———
+
+      - name: Create Firebase service account key
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
+
+      - name: Send silent push notification
+        run: node send-notification.js
+        env:
+          SERVICE_ACCOUNT_PATH: './firebase-service-account.json'
+          PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
