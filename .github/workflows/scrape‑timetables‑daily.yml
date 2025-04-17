@@ -1,9 +1,9 @@
 name: Scrape Timetables Daily
 
 on:
-  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'  # Every day at midnight
+  workflow_dispatch:    # Allows you to trigger it manually from the Actions UI
 
 jobs:
   scrape:
@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run scraper
         run: node list-classes.js
@@ -34,6 +34,4 @@ jobs:
         uses: actions/download-artifact@v3.1.2
         with:
           name: timetable-json
-          path: ./downloaded
-
-  # Other jobs can follow here if needed
+          path: downloaded/
