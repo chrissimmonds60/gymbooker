@@ -16,49 +16,70 @@ jobs:
       - name: Debug:Print environment variables
         run: printenv
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Debug:Print Node.js and npm versions
+      - name: Debug:Print Node.js, npm versions and npm config
         run: |
+          echo '--- Node & npm versions ---'
           node -v
           npm -v
+          echo '--- NPM config ---'
+          npm config list
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Debug:Show .npmrc (if any)
+        run: cat ~/.npmrc || echo '(no .npmrc)'
 
-      - name: Debug:List installed dependencies
-        run: ls -la node_modules
+      - name: Debug:Show package.json
+        run: |
+          echo '--- package.json ---'
+          cat package.json
+
+      - name: Debug:Show top of package-lock.json
+        run: |
+          echo '--- head package-lock.json ---'
+          head -n 50 package-lock.json
+
+      - name: Install dependencies (with verbose logging)
+        run: npm ci --verbose
+        continue-on-error: true
+
+      - name: Debug:List NPM debug logs
+        run: |
+          echo '--- NPM log directory ---'
+          ls -lah /home/runner/.npm/_logs
+          echo '--- NPM logs ---'
+          cat /home/runner/.npm/_logs/*.log || echo '(no logs found)'
+
+      - name: Debug:Check for puppeteer in dependencies
+        run: |
+          node -e "const pkg=require('./package.json'); \
+          console.log('puppeteer declared in dependencies:', \
+            !!(pkg.dependencies && pkg.dependencies.puppeteer));"
 
       - name: Run scraper
+        if: ${{ success() }}
         run: node list-classes.js
 
       - name: Debug:List all workspace files post‑scrape
+        if: ${{ success() }}
         run: ls -R .
 
-      - name: Debug:Show sample of classes.json
-        run: head -n 50 classes.json
-
-      - name: Debug:Count timetable entries
-        run: |
-          node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('classes.json')); console.log('Entries:', Array.isArray(data) ? data.length : Object.keys(data).length);"
-
       - name: Upload timetable JSON
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: timetable-json
           path: classes.json
 
       - name: Download timetable JSON
+        if: ${{ success() }}
         uses: actions/download-artifact@v4
         with:
           name: timetable-json
           path: ./downloaded
 
       - name: Debug:List downloaded files
+        if: ${{ success() }}
         run: ls -la downloaded
 
       - name: Debug:Show downloaded timetable
+        if: ${{ success() }}
         run: cat downloaded/classes.json
