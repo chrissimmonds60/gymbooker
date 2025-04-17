@@ -45,18 +45,6 @@ jobs:
           name: timetable-json
           path: classes.json
 
-      # ——— Create your Firebase service account file ———
-      - name: Create Firebase key file
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
-
-      # ——— Send a silent push via your node script ———
-      - name: Send silent push notification
-        env:
-          SERVICE_ACCOUNT_PATH: firebase-service-account.json
-          PROJECT_ID:          ${{ secrets.FIREBASE_PROJECT_ID }}
-        run: node send-notification.js
-
   publish:
     needs: scrape
     runs-on: ubuntu-latest
