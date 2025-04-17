@@ -1,19 +1,16 @@
- {
-   "name": "virgin-booker",
-   "version": "1.0.0",
-   "description": "Automates class bookings on Virgin Active",
-   "main": "index.js",
-   "scripts": {
-     "start": "node index.js"
-   },
-   "author": "chrissimmonds",
-   "license": "MIT",
--  "dependencies": {
--    "puppeteer": "^21.0.0"
--  }
-+  "dependencies": {
-+    "puppeteer":           "^21.0.0",
-+    "google-auth-library": "^9.0.0",
-+    "node-fetch":          "^2.6.7"
-+  }
- }
+{
+  "name": "virgin-booker",
+  "version": "1.0.0",
+  "description": "Automates class bookings on Virgin Active",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "chrissimmonds",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "google-auth-library": "^9.0.0",
+    "node-fetch": "^2.6.7"
+  }
+}
