@@ -25,7 +25,7 @@ jobs:
         run: node list-classes.js
 
       - name: Upload timetable JSON
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: timetable-json
           path: classes.json
