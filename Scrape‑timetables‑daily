@@ -1,0 +1,49 @@
+name: Scrape‑timetables‑daily
+
+on:
+  schedule:
+    # every night at 00:35 London time (adjust as you like)
+    - cron: '35 23 * * *'   # GitHub cron uses UTC
+  workflow_dispatch:        # let you run it on‑demand from the Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    env:
+      VA_USER: ${{ secrets.VA_USER }}
+      VA_PASS: ${{ secrets.VA_PASS }}
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run scraper
+        run: node list-classes.js > classes.json
+
+      - name: Upload JSON as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: classes-json
+          path: classes.json
+          retention-days: 7
+
+      # Optional: commit the JSON back into the repo (e.g. to `data/`)
+      # - name: Commit data
+      #   run: |
+      #     mkdir -p data
+      #     mv classes.json "data/classes-$(date +%F).json"
+      #     git config --global user.email "actions@github.com"
+      #     git config --global user.name  "GitHub Actions"
+      #     git add data/*.json
+      #     git commit -m "data: classes for $(date +%F)" || echo "no change"
+      #     git push
