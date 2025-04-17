@@ -1,55 +1,60 @@
 name: Scrape Timetables Daily
 
 on:
-  workflow_dispatch:      # manual trigger via GitHub UI
   schedule:
-    - cron: '0 0 * * *'   # daily at 00:00 UTC
+    - cron: '0 0 * * *'  # every day at midnight UTC
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    env:
-      VA_USER: ${{ secrets.VA_USER }}
-      VA_PASS: ${{ secrets.VA_PASS }}
-      PUPPETEER_SKIP_DOWNLOAD: 'true'
-      PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
-
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Confirm Chromium binary
-        run: |
-          which chromium-browser || which chromium
-          chromium-browser --version
-
-      - name: Set up Node.js 18
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '14'
 
       - name: Install dependencies
-        run: npm ci --verbose
+        run: npm ci
 
-      - name: Run scraper (capture to classes.json)
-        run: node list-classes.js > classes.json
+      - name: Run scraper
+        run: node list-classes.js
 
-      - name: Debug:Show the new classes.json
-        run: |
-          ls -la classes.json
-          head -n 20 classes.json
+      - name: Debug: List workspace files
+        run: ls -la
 
       - name: Upload timetable JSON
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: timetable-json
           path: classes.json
 
+  publish:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Download timetable JSON
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: timetable-json
-          path: ./downloaded
+          path: .
 
-      - name: Debug:Show downloaded timetable
-        run: cat downloaded/classes.json
+      - name: Copy JSON into docs
+        run: |
+          mkdir -p docs
+          mv classes.json docs/classes.json
+
+      - name: Commit & Push to main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/classes.json
+          git commit -m "Publish timetable JSON for $(date -I)"
+          git push
