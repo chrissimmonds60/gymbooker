@@ -9,23 +9,26 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     env:
-      # Use the system Chromium and skip Puppeteer's own download
+      # Skip Puppeteer’s Chromium download
       PUPPETEER_SKIP_DOWNLOAD: 'true'
+      # (Puppeteer’s default macOS path will be symlinked to this)
       PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Debug:Print environment
-        run: printenv
-
       - name: Debug:Confirm system Chromium
         run: |
-          which chromium || which chromium-browser
-          chromium --version || chromium-browser --version
+          which chromium-browser || which chromium
+          chromium-browser --version || chromium --version
 
-      - name: Set up Node.js
+      - name: Create macOS‑style Chrome path
+        run: |
+          sudo mkdir -p "/Applications/Google Chrome.app/Contents/MacOS"
+          sudo ln -sf /usr/bin/chromium-browser "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+      - name: Set up Node.js 18
         uses: actions/setup-node@v2
         with:
           node-version: '18'
@@ -35,7 +38,7 @@ jobs:
           node -v
           npm -v
 
-      - name: Debug:Show package.json & lockfile
+      - name: Show package.json & lockfile head
         run: |
           echo '--- package.json ---'
           cat package.json
@@ -45,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --verbose
 
-      - name: Debug:Verify Puppeteer got installed
+      - name: Debug:Verify Puppeteer installation
         run: |
           npm ls puppeteer
           ls -la node_modules/puppeteer
