@@ -9,10 +9,8 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     env:
-      # Credentials stored as GitHub Secrets
       VA_USER: ${{ secrets.VA_USER }}
       VA_PASS: ${{ secrets.VA_PASS }}
-      # Puppeteer settings
       PUPPETEER_SKIP_DOWNLOAD: 'true'
       PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
 
@@ -20,44 +18,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Debug:Print environment variables
-        run: printenv
-
-      - name: Debug:Confirm Chromium binary
+      - name: Confirm Chromium binary
         run: |
           which chromium-browser || which chromium
-          chromium-browser --version || chromium --version
+          chromium-browser --version
 
       - name: Set up Node.js 18
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      - name: Debug:Print Node & npm versions
-        run: |
-          node -v
-          npm -v
-
-      - name: Display package files
-        run: |
-          echo '--- package.json ---'
-          cat package.json
-          echo '--- lockfile head ---'
-          head -n 30 package-lock.json
-
       - name: Install dependencies
         run: npm ci --verbose
 
-      - name: Debug:Verify Puppeteer installation
+      - name: Run scraper (capture to classes.json)
+        run: node list-classes.js > classes.json
+
+      - name: Debug:Show the new classes.json
         run: |
-          npm ls puppeteer
-          ls -la node_modules/puppeteer
-
-      - name: Run scraper
-        run: node list-classes.js
-
-      - name: Debug:List all workspace files
-        run: ls -R .
+          ls -la classes.json
+          head -n 20 classes.json
 
       - name: Upload timetable JSON
         uses: actions/upload-artifact@v4
