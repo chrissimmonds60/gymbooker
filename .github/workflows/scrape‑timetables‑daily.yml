@@ -1,13 +1,10 @@
-# .github/workflows/scrape-timetables-daily.yml
 name: Scrape Timetables Daily
 
-# run on a daily schedule, plus you can trigger it manually
 on:
   schedule:
-    - cron: '0 0 * * *'  # every day at midnight (UTC)
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
-# Grant the runner the permission to upload/download artifacts
 permissions:
   contents: read
   actions: write
@@ -37,7 +34,7 @@ jobs:
           name: timetable-json
           path: classes.json
 
-      - name: Download JSON (for downstream jobs)
+      - name: Download JSON
         uses: actions/download-artifact@v3
         with:
           name: timetable-json
