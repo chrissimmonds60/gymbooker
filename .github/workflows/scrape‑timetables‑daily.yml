@@ -9,7 +9,7 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     env:
-      # Use the system Chromium and skip Puppeteer’s download
+      # Use the system Chromium and skip Puppeteer's own download
       PUPPETEER_SKIP_DOWNLOAD: 'true'
       PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium'
 
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Debug:Print environment variables
+      - name: Debug:Print environment
         run: printenv
 
       - name: Debug:Confirm system Chromium
@@ -28,62 +28,45 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
 
-      - name: Debug:Print Node.js and npm versions
+      - name: Debug:Print Node & npm versions
         run: |
           node -v
           npm -v
 
-      - name: Debug:Show package.json
+      - name: Debug:Show package.json & lockfile
         run: |
           echo '--- package.json ---'
           cat package.json
-
-      - name: Debug:Show top of package-lock.json
-        run: |
           echo '--- head package-lock.json ---'
-          head -n 50 package-lock.json
+          head -n 30 package-lock.json
 
-      - name: Install dependencies (verbose)
+      - name: Install dependencies
         run: npm ci --verbose
-        continue-on-error: true
 
-      - name: Debug:Show npm debug logs
+      - name: Debug:Verify Puppeteer got installed
         run: |
-          echo '--- NPM log files ---'
-          ls -lah /home/runner/.npm/_logs
-          echo '--- Latest log ---'
-          tail -n 100 /home/runner/.npm/_logs/*.log || echo '(no logs found)'
-
-      - name: Debug:Check Puppeteer config
-        run: |
-          echo "PUPPETEER_SKIP_DOWNLOAD=$PUPPETEER_SKIP_DOWNLOAD"
-          echo "PUPPETEER_EXECUTABLE_PATH=$PUPPETEER_EXECUTABLE_PATH"
-          node -e "console.log('puppeteer in deps:', !!require('./package.json').dependencies.puppeteer)"
+          npm ls puppeteer
+          ls -la node_modules/puppeteer
 
       - name: Run scraper
-        if: ${{ success() }}
         run: node list-classes.js
 
       - name: Debug:List workspace files post‑scrape
-        if: ${{ success() }}
         run: ls -R .
 
       - name: Upload timetable JSON
-        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: timetable-json
           path: classes.json
 
       - name: Download timetable JSON
-        if: ${{ success() }}
         uses: actions/download-artifact@v4
         with:
           name: timetable-json
           path: ./downloaded
 
       - name: Debug:Show downloaded timetable
-        if: ${{ success() }}
         run: cat downloaded/classes.json
