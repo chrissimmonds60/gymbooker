@@ -1,32 +1,32 @@
 name: Scrape Timetables Daily
 
 on:
-  workflow_dispatch:      # allows manual trigger from GitHub UI
+  workflow_dispatch:      # manual trigger via GitHub UI
   schedule:
-    - cron: '0 0 * * *'   # every day at midnight (UTC)
+    - cron: '0 0 * * *'   # daily at 00:00 UTC
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     env:
-      # Skip Puppeteer’s Chromium download
+      # Credentials stored as GitHub Secrets
+      VA_USER: ${{ secrets.VA_USER }}
+      VA_PASS: ${{ secrets.VA_PASS }}
+      # Puppeteer settings
       PUPPETEER_SKIP_DOWNLOAD: 'true'
-      # (Puppeteer’s default macOS path will be symlinked to this)
-      PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium'
+      PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Debug:Confirm system Chromium
+      - name: Debug:Print environment variables
+        run: printenv
+
+      - name: Debug:Confirm Chromium binary
         run: |
           which chromium-browser || which chromium
           chromium-browser --version || chromium --version
-
-      - name: Create macOS‑style Chrome path
-        run: |
-          sudo mkdir -p "/Applications/Google Chrome.app/Contents/MacOS"
-          sudo ln -sf /usr/bin/chromium-browser "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
       - name: Set up Node.js 18
         uses: actions/setup-node@v2
@@ -38,11 +38,11 @@ jobs:
           node -v
           npm -v
 
-      - name: Show package.json & lockfile head
+      - name: Display package files
         run: |
           echo '--- package.json ---'
           cat package.json
-          echo '--- head package-lock.json ---'
+          echo '--- lockfile head ---'
           head -n 30 package-lock.json
 
       - name: Install dependencies
@@ -56,7 +56,7 @@ jobs:
       - name: Run scraper
         run: node list-classes.js
 
-      - name: Debug:List workspace files post‑scrape
+      - name: Debug:List all workspace files
         run: ls -R .
 
       - name: Upload timetable JSON
