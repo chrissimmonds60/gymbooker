@@ -4,13 +4,19 @@ const puppeteer = require('puppeteer');
 (async () => {
   /* ───────────────────── 1. launch headed for debugging ───────────────────── */
   const browser = await puppeteer.launch({
-        headless: false,          // run with a visible (“headed”) browser window
-        slowMo: 80,               // slow actions a bit so we can watch what happens
-        devtools: false,          // set true if you’d like Chrome DevTools to auto‑open
-        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--start-maximized'],
-        defaultViewport: null,
-  });
+  headless: 'new',          // run in headless (Chromium >=109); use true if on older versions
+  // slowMo: 80,            // you can keep this if you still want a little delay
+  // devtools: false,
+  executablePath: '/usr/bin/chromium-browser',   // point to the system Chromium
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-gpu',
+    '--disable-dev-shm-usage',
+    '--window-size=1920,1080'
+  ],
+  defaultViewport: { width: 1920, height: 1080 },
+});
   const page = await browser.newPage();
 
   /* ───────────────────── 2. helpers ───────────────────── */
