@@ -15,14 +15,16 @@ jobs:
       PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Confirm Chromium binary
         run: |
           which chromium-browser || which chromium
           chromium-browser --version
 
-      - uses: actions/setup-node@v3
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
@@ -43,23 +45,25 @@ jobs:
           name: timetable-json
           path: classes.json
 
-      # —— Silent push via Firebase, right after scraping ——      
-
-      - name: Create Firebase service account key
+      # ——— Create your Firebase service account file ———
+      - name: Create Firebase key file
         run: |
           echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
 
+      # ——— Send a silent push via your node script ———
       - name: Send silent push notification
-        run: node send-notification.js
         env:
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          SERVICE_ACCOUNT_PATH: firebase-service-account.json
+          PROJECT_ID:          ${{ secrets.FIREBASE_PROJECT_ID }}
+        run: node send-notification.js
 
   publish:
     needs: scrape
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Download timetable JSON
         uses: actions/download-artifact@v4
