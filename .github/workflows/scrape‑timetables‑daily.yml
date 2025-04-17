@@ -22,7 +22,7 @@ jobs:
       - name: Run scraper
         run: node list-classes.js
 
-      - name: Debug: List workspace files
+      - name: Debug:List workspace files
         run: ls -la
 
       - name: Upload timetable JSON
