@@ -28,10 +28,7 @@ jobs:
       - name: Scrape classes
         run: node list-classes.js
 
-      - name: Debugging: list workspace
-        run: |
-          echo "Files in $GITHUB_WORKSPACE:"
-          ls -lah .
+      
 
       - name: Upload timetable JSON
         uses: actions/upload-artifact@v3
