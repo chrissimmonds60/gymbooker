@@ -3,7 +3,7 @@ name: Scrape Timetables Daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'   # daily at midnight UTC
 
 jobs:
   scrape:
@@ -56,6 +56,9 @@ jobs:
           name: timetable-json
           path: .
 
+      - name: Install dependencies (for send-notification)
+        run: npm ci --verbose
+
       - name: Copy JSON into docs
         run: |
           mkdir -p docs
@@ -71,10 +74,13 @@ jobs:
           git commit -m "Publish timetable for $(date -I --utc)" || echo "No changes to commit"
           git push
 
-      # ——— Silent push via Firebase ———
+      # —— prepare service account and fire silent push ——      
+
+      - name: Create Firebase service account key
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
 
       - name: Send silent push notification
         run: node send-notification.js
         env:
-          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
-          FIREBASE_PROJECT_ID:          ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
