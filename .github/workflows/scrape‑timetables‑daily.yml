@@ -43,6 +43,17 @@ jobs:
           name: timetable-json
           path: classes.json
 
+      # —— Silent push via Firebase, right after scraping ——      
+
+      - name: Create Firebase service account key
+        run: |
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
+
+      - name: Send silent push notification
+        run: node send-notification.js
+        env:
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+
   publish:
     needs: scrape
     runs-on: ubuntu-latest
@@ -55,9 +66,6 @@ jobs:
         with:
           name: timetable-json
           path: .
-
-      - name: Install dependencies (for send-notification)
-        run: npm ci --verbose
 
       - name: Copy JSON into docs
         run: |
@@ -73,14 +81,3 @@ jobs:
           git add docs/classes.json
           git commit -m "Publish timetable for $(date -I --utc)" || echo "No changes to commit"
           git push
-
-      # —— prepare service account and fire silent push ——      
-
-      - name: Create Firebase service account key
-        run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-service-account.json
-
-      - name: Send silent push notification
-        run: node send-notification.js
-        env:
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
