@@ -259,3 +259,8 @@ async function runBooking() {
 }
 
 runBooking();
+// at the bottom of index.js
+module.exports = function scheduleBooking(clubSlug, date, time, className) {
+  // pull out the logic from your runBooking() wrapper
+  // return a Promise that resolves once Puppeteer has scheduled the job
+};
