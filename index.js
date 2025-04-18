@@ -1,13 +1,57 @@
 const puppeteer = require('puppeteer');
+const schedule  = require('node-schedule');
+let args = process.argv.slice(2);
+const isTest = args.includes('--test');
+if (isTest) {
+  // remove the test flag so it doesn't interfere with the rest of the args
+  args = args.filter(a => a !== '--test');
+}
+const clubSlug      = args[0];
+const targetDateISO = args[1];
+const targetTime    = args[2];
+const targetClass   = args.slice(3).join(' ').toLowerCase();
 
-(async () => {
+if (!clubSlug || !targetDateISO || !targetTime || !targetClass) {
+  console.error('Usage: node index.js <clubSlug> <yyyy-mm-dd> <HH:MM> <className>');
+  process.exit(1);
+}
+
+// ──────────────────────────────────────────────────────────────
+//  Scheduling: calculate when the class booking opens
+//   (7 days before + 5 minutes after class end; assumes 45 min duration)
+const [hour, minute] = targetTime.split(':').map(Number);
+const classStart   = new Date(`${targetDateISO}T${targetTime}:00`);
+const classEnd     = new Date(classStart.getTime() + 45 * 60000);
+let bookingOpenTime = new Date(classEnd.getTime() - 7 * 24 * 60 * 60000 + 5 * 60000);
+if (isTest) {
+  // schedule test run 10 seconds from now
+  console.log('⚙️  Test mode: overriding bookingOpenTime to 10s from now');
+  bookingOpenTime = new Date(Date.now() + 10000);
+}
+
+if (new Date() < bookingOpenTime) {
+  schedule.scheduleJob(bookingOpenTime, runBooking);
+  console.log(`Booking scheduled for ${bookingOpenTime}`);
+    // prevent process from exiting before scheduled job runs
+    process.stdin.resume();
+  // Keep the process alive for the scheduled booking
+  return;
+}
+// ──────────────────────────────────────────────────────────────
+
+async function runBooking() {
   try {
     const browser = await puppeteer.launch({
-      headless: false,          // run with a visible (“headed”) browser window
+      headless: true,           // run in headless mode
       slowMo: 80,               // slow actions a bit so we can watch what happens
-      devtools: false,          // set true if you’d like Chrome DevTools to auto‑open
       executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-      args: ['--no-sandbox', '--disable-setuid-sandbox', '--start-maximized'],
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--start-maximized'
+      ],
       defaultViewport: null,
     });
 
@@ -19,8 +63,6 @@ const puppeteer = require('puppeteer');
     async function autoScroll(page) {
       await page.evaluate(async () => {
         await new Promise(resolve => {
-          // Scroll only inside the timetable accordion, so we don’t nudge the
-          // horizontal day selector sideways.
           const scrollEl =
             document.querySelector('.va__accordion') || // main timetable list
             document.scrollingElement ||                // fallback
@@ -57,25 +99,20 @@ const puppeteer = require('puppeteer');
     // ──────────────────────────────────────────────────────────────
     async function selectDateTab(page, targetDateISO) {
       await page.evaluate((targetDateISO) => {
-        // Look for an element containing a <time datetime="yyyy‑mm‑dd"> tag
         const dateEl = Array.from(document.querySelectorAll('[datetime]'))
           .find(el => el.getAttribute('datetime') === targetDateISO);
 
         if (dateEl) {
-          // The clickable element might be the <time> itself or a parent button
           const clickable = dateEl.closest('button, a, div') || dateEl;
           clickable.click();
         }
       }, targetDateISO);
 
-      // Give the timetable a moment to refresh
       await page.waitForTimeout(1500);
     }
 
     console.log('Navigating to login page...');
     await page.goto('https://www.virginactive.co.uk/login', { waitUntil: 'networkidle2' });
-
-    await page.screenshot({ path: 'login-debug.png' });
 
     console.log('Checking for cookie banner...');
     try {
@@ -109,7 +146,6 @@ const puppeteer = require('puppeteer');
     console.log('Clicking login button...');
     await page.click('button[type="submit"]');
     await page.waitForTimeout(3000);
-    await page.screenshot({ path: 'post-login-debug.png' });
 
     console.log('Waiting for post-login content...');
     try {
@@ -121,21 +157,16 @@ const puppeteer = require('puppeteer');
       console.log('Page content snapshot:\n', content.slice(0, 1000));
     }
 
-    const clubSlug = 'wimbledon-worple-road';
     // -------- desired day --------------------------------------------------
-    const targetDateISO = '2025-04-22';     // yyyy‑mm‑dd for 22 Apr 2025
     const timetableUrl  = `https://www.virginactive.co.uk/clubs/${clubSlug}/timetable?activeDay=${targetDateISO}`;
     // -----------------------------------------------------------------------
 
     console.log(`Navigating to class timetable: ${timetableUrl}`);
     await page.goto(timetableUrl, { waitUntil: 'networkidle2' });
     
-    // Make sure the correct day is still selected (the bar sometimes auto‑slides)
     await selectDateTab(page, targetDateISO);
 
     await page.waitForTimeout(20000);
-
-    await page.screenshot({ path: 'timetable-scrolled.png' });
     
     await page.waitForTimeout(8000);
     // ──────────────────────────────────────────────────────────────
@@ -144,7 +175,6 @@ const puppeteer = require('puppeteer');
     await page.waitForSelector('dt.va__accordion-section', { timeout: 20000 });
     await autoScroll(page);
 
-    // Extra settling time and second pass for late‑loading rows
     await page.waitForTimeout(5000);
     await autoScroll(page);
 
@@ -152,12 +182,10 @@ const puppeteer = require('puppeteer');
       const collected = new Set();
       const out       = [];
 
-      // expand closed rows and record every (time – title) pair
       document.querySelectorAll('dt.va__accordion-section').forEach(dt => {
         const rowDate = dt.querySelector('.class-timetable-panel__class-date time')
           ?.getAttribute('datetime') || '';
       
-        // Skip rows that are not for the target day
         if (rowDate !== targetDateISO) return;
         if (dt.getAttribute('aria-expanded') === 'false') {
           (dt.querySelector('.va__accordion-title') || dt).click();
@@ -183,8 +211,6 @@ const puppeteer = require('puppeteer');
 
     console.log(`🧮 Classes harvested: ${allClasses.length}`);
     allClasses.forEach(cls => console.log(`  - ${cls}`));
-    // Capture the timetable exactly as it appears after harvesting classes
-    await page.screenshot({ path: 'timetable-after-list.png' });
     
     // Wait 5 seconds before continuing with the 18:45 search/debug logic
     await page.waitForTimeout(5000);
@@ -192,43 +218,9 @@ const puppeteer = require('puppeteer');
     // Give the page 5 seconds to settle (lazy‑loading, animations, etc.)
     await page.waitForTimeout(5000);
 
-    // ──────────────────────────────────────────────────────────────
-    // DEBUG: list every row whose time starts with 18:45
-    // ──────────────────────────────────────────────────────────────
-    console.log('🔎 Dumping every 18:45 row that the page can see...');
-    const debugRows1845 = await page.evaluate((targetDateISO) => {
-      return Array.from(document.querySelectorAll('dt.va__accordion-section'))
-        .filter(dt => {
-          const rowDate = dt.querySelector('.class-timetable-panel__class-date time')
-            ?.getAttribute('datetime') || '';
-          if (rowDate !== targetDateISO) return false;
-      
-          return (dt.querySelector('.class-timetable__class-time time')?.textContent.trim().toLowerCase() || '')
-            .startsWith('18:45');
-        })
-        .map((dt, i) => {
-          const time   = dt.querySelector('.class-timetable__class-time time')?.textContent.trim() || '';
-          const titles = Array.from(dt.querySelectorAll('.class-timetable__class-title'))
-            .map(t => t.textContent.trim())
-            .join(' | ');
-          const button = dt.querySelector('button.class-timetable__book-button')
-            ?.textContent.trim() || 'no button';
-          return `[#${i + 1}] ${time} — ${titles} — button: ${button}`;
-        });
-    }, targetDateISO);
-    if (debugRows1845.length) {
-      debugRows1845.forEach(row => console.log(row));
-    } else {
-      console.log('⚠️  No 18:45 rows visible in the DOM at this point.');
-    }
     console.log('📋 Searching for 18:45 Pilates Athletic class...');
 
-    const clicked = await page.evaluate((targetDateISO) => {
-      const TARGET_TIME  = '18:45';                     // HH:MM (24‑h)
-    const TARGET_CLASS = 'pilates athletic.';         // match label on site (note trailing period)
-
-      // 1️⃣  Find the <dt> row whose time starts with 18:45 and whose
-      //     title list contains "pilates athletic"
+    const clicked = await page.evaluate((targetDateISO, TARGET_TIME, TARGET_CLASS) => {
       const targetRow = Array.from(
         document.querySelectorAll('dt.va__accordion-section')
       ).find(dt => {
@@ -251,9 +243,6 @@ const puppeteer = require('puppeteer');
 
       if (!targetRow) return 'row-not-found';
 
-      // 2️⃣  Within that row, pick the primary button:
-      //     - "Book"  → class-timetable__book-button--available
-      //     - "Waitlist" → class-timetable__book-button--waitlist
       const button =
         targetRow.querySelector(
           'button.class-timetable__book-button--available, button.class-timetable__book-button--waitlist'
@@ -261,12 +250,11 @@ const puppeteer = require('puppeteer');
 
       if (!button) return 'button-not-found';
 
-      // 3️⃣  Click it
       button.click();
       return button.classList.contains('class-timetable__book-button--available')
         ? 'book-clicked'
         : 'waitlist-clicked';
-    }, targetDateISO);
+    }, targetDateISO, targetTime, targetClass);
 
     switch (clicked) {
       case 'book-clicked':
@@ -283,11 +271,10 @@ const puppeteer = require('puppeteer');
         console.log('❌ Couldn’t find any 18:45 Pilates Athletic row.');
     }
 
-    await page.screenshot({ path: 'final-timetable.png' });
-    await page.screenshot({ path: 'post-login.png' });
-
     await browser.close();
   } catch (err) {
     console.error('Unhandled error in script:', err);
   }
-})();
+}
+
+runBooking();

@@ -9,8 +9,6 @@
   "author": "chrissimmonds",
   "license": "MIT",
   "dependencies": {
-    "google-auth-library": "^9.15.1",
-    "node-fetch": "^2.7.0",
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^21.11.0"
   }
 }
