@@ -1,26 +1,34 @@
-// server.js
-require('dotenv').config();
 const express = require('express');
+const bodyParser = require('body-parser');
 const scheduleBooking = require('./index');
 
 const app = express();
-app.use(express.json());
+app.use(bodyParser.json());
+
+// log every request
+app.use((req, res, next) => {
+  console.log(`\n[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  if (Object.keys(req.body).length) console.log('  body:', req.body);
+  next();
+});
 
 app.post('/schedule-booking', async (req, res) => {
-  const { club, date, time, className, test } = req.body;
+  const { club, date, time, className } = req.body;
   if (!club || !date || !time || !className) {
+    console.log('  → 400 missing fields');
     return res.status(400).json({ error: 'missing fields' });
   }
+
   try {
-    const when = scheduleBooking(club, date, time, className.toLowerCase(), !!test);
-    return res.json({ success: true, scheduledFor: when });
+    console.log(`  → scheduling booking: ${club} ${date} ${time} "${className}"`);
+    const result = await scheduleBooking(club, date, time, className);
+    console.log('  ← result:', result);
+    res.json({ success: true, scheduledFor: result });
   } catch (err) {
-    console.error('API scheduling error:', err);
-    return res.status(500).json({ error: err.message });
+    console.error('  Booking error:', err);
+    res.status(500).json({ error: 'booking failed' });
   }
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🏃‍♂️  Booking‑API listening on http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`🏃‍♂️  Booking‑API listening on http://localhost:${PORT}`));
