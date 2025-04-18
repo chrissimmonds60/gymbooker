@@ -9,6 +9,7 @@
   "author": "chrissimmonds",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "node-schedule": "^2.1.1",
     "puppeteer": "^21.11.0"
   }
