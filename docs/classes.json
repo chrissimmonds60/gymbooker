@@ -2,27 +2,32 @@
   {
     "club": "wimbledon",
     "time": "07:00 - 07:45",
-    "title": "strength and conditioning"
+    "title": "lift club"
   },
   {
     "club": "wimbledon",
-    "time": "07:15 - 08:00",
+    "time": "07:00 - 07:45",
     "title": "reformer align"
   },
   {
     "club": "wimbledon",
     "time": "08:15 - 09:00",
-    "title": "reformer foundations"
-  },
-  {
-    "club": "wimbledon",
-    "time": "09:15 - 10:00",
     "title": "reformer align"
   },
   {
     "club": "wimbledon",
+    "time": "09:15 - 10:00",
+    "title": "reformer athletic"
+  },
+  {
+    "club": "wimbledon",
     "time": "09:30 - 10:15",
-    "title": "lift club"
+    "title": "cycle tempo"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:30 - 10:15",
+    "title": "strength and conditioning"
   },
   {
     "club": "wimbledon",
@@ -32,7 +37,7 @@
   {
     "club": "wimbledon",
     "time": "09:45 - 10:45",
-    "title": "yoga flow"
+    "title": "yoga align"
   },
   {
     "club": "wimbledon",
@@ -42,17 +47,17 @@
   {
     "club": "wimbledon",
     "time": "10:30 - 11:15",
-    "title": "strength and conditioning"
+    "title": "lift club"
   },
   {
     "club": "wimbledon",
     "time": "11:00 - 11:45",
-    "title": "pilates align."
+    "title": "yoga flow"
   },
   {
     "club": "wimbledon",
     "time": "11:15 - 12:00",
-    "title": "reformer recovery"
+    "title": "reformer align"
   },
   {
     "club": "wimbledon",
@@ -61,17 +66,17 @@
   },
   {
     "club": "wimbledon",
+    "time": "12:00 - 12:30",
+    "title": "pilates express"
+  },
+  {
+    "club": "wimbledon",
     "time": "12:15 - 13:00",
     "title": "reformer align"
   },
   {
     "club": "wimbledon",
-    "time": "12:30 - 13:15",
-    "title": "lift club"
-  },
-  {
-    "club": "wimbledon",
-    "time": "13:15 - 14:00",
+    "time": "16:15 - 17:00",
     "title": "reformer align"
   },
   {
@@ -81,33 +86,23 @@
   },
   {
     "club": "wimbledon",
-    "time": "17:45 - 18:30",
-    "title": "lift club"
-  },
-  {
-    "club": "wimbledon",
-    "time": "17:45 - 18:30",
-    "title": "pilates align."
-  },
-  {
-    "club": "wimbledon",
-    "time": "18:00 - 18:45",
+    "time": "17:30 - 18:15",
     "title": "strength and conditioning"
   },
   {
     "club": "wimbledon",
+    "time": "17:45 - 18:45",
+    "title": "yoga calm"
+  },
+  {
+    "club": "wimbledon",
     "time": "18:15 - 19:00",
-    "title": "reformer athletic"
+    "title": "reformer align"
   },
   {
     "club": "wimbledon",
-    "time": "18:45 - 19:30",
+    "time": "18:30 - 19:15",
     "title": "lift club"
-  },
-  {
-    "club": "wimbledon",
-    "time": "18:45 - 19:45",
-    "title": "yoga align"
   },
   {
     "club": "wimbledon",
@@ -116,18 +111,8 @@
   },
   {
     "club": "bank",
-    "time": "06:15 - 07:00",
+    "time": "07:15 - 08:00",
     "title": "reformer align"
-  },
-  {
-    "club": "bank",
-    "time": "07:15 - 08:00",
-    "title": "reformer athletic"
-  },
-  {
-    "club": "bank",
-    "time": "07:15 - 08:00",
-    "title": "strength and conditioning"
   },
   {
     "club": "bank",
@@ -147,7 +132,7 @@
   {
     "club": "bank",
     "time": "12:15 - 13:00",
-    "title": "reformer athletic"
+    "title": "reformer align"
   },
   {
     "club": "bank",
@@ -156,13 +141,13 @@
   },
   {
     "club": "bank",
-    "time": "12:45 - 13:30",
-    "title": "yoga align"
+    "time": "12:30 - 13:15",
+    "title": "cycle power"
   },
   {
     "club": "bank",
     "time": "13:15 - 14:00",
-    "title": "reformer athletic"
+    "title": "reformer recovery"
   },
   {
     "club": "bank",
@@ -171,33 +156,18 @@
   },
   {
     "club": "bank",
-    "time": "15:30 - 16:15",
+    "time": "16:00 - 16:45",
     "title": "reformer align"
   },
   {
     "club": "bank",
-    "time": "16:30 - 17:15",
+    "time": "17:00 - 17:45",
     "title": "reformer align"
   },
   {
     "club": "bank",
-    "time": "17:30 - 18:15",
-    "title": "reformer athletic"
-  },
-  {
-    "club": "bank",
-    "time": "17:45 - 18:30",
-    "title": "cycle tempo"
-  },
-  {
-    "club": "bank",
-    "time": "17:45 - 18:30",
-    "title": "strength and conditioning"
-  },
-  {
-    "club": "walbrook",
-    "time": "06:45 - 07:30",
-    "title": "boxing bag work"
+    "time": "18:00 - 18:45",
+    "title": "reformer recovery"
   },
   {
     "club": "walbrook",
@@ -208,11 +178,6 @@
     "club": "walbrook",
     "time": "12:15 - 13:00",
     "title": "boxing bag work"
-  },
-  {
-    "club": "walbrook",
-    "time": "12:15 - 13:00",
-    "title": "cycle power"
   },
   {
     "club": "walbrook",
@@ -221,7 +186,7 @@
   },
   {
     "club": "walbrook",
-    "time": "18:15 - 19:00",
+    "time": "17:30 - 18:15",
     "title": "strength and conditioning"
   },
   {
@@ -236,13 +201,18 @@
   },
   {
     "club": "moorgate",
+    "time": "07:15 - 08:00",
+    "title": "cycle power"
+  },
+  {
+    "club": "moorgate",
     "time": "07:30 - 08:15",
-    "title": "yoga align"
+    "title": "mat pilates"
   },
   {
     "club": "moorgate",
     "time": "07:45 - 08:30",
-    "title": "reformer align"
+    "title": "reformer athletic"
   },
   {
     "club": "moorgate",
@@ -252,7 +222,7 @@
   {
     "club": "moorgate",
     "time": "10:15 - 11:00",
-    "title": "reformer align"
+    "title": "reformer athletic"
   },
   {
     "club": "moorgate",
@@ -262,17 +232,17 @@
   {
     "club": "moorgate",
     "time": "12:15 - 13:00",
-    "title": "cycle power"
+    "title": "boxing"
   },
   {
     "club": "moorgate",
     "time": "12:15 - 13:00",
-    "title": "reformer athletic"
+    "title": "reformer align"
   },
   {
     "club": "moorgate",
     "time": "12:15 - 13:00",
-    "title": "yoga flow"
+    "title": "yoga align"
   },
   {
     "club": "moorgate",
@@ -287,57 +257,27 @@
   {
     "club": "moorgate",
     "time": "14:15 - 15:00",
-    "title": "reformer align"
-  },
-  {
-    "club": "moorgate",
-    "time": "15:15 - 16:00",
     "title": "reformer athletic"
   },
   {
     "club": "moorgate",
-    "time": "16:15 - 17:00",
-    "title": "reformer align"
-  },
-  {
-    "club": "moorgate",
-    "time": "17:15 - 18:00",
+    "time": "16:30 - 17:15",
     "title": "reformer align"
   },
   {
     "club": "moorgate",
     "time": "17:30 - 18:15",
-    "title": "cycle power"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:00 - 18:45",
-    "title": "swim club"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:15 - 19:00",
-    "title": "reformer foundations"
+    "title": "reformer align"
   },
   {
     "club": "moorgate",
     "time": "18:30 - 19:15",
-    "title": "strength and conditioning"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:45 - 19:30",
-    "title": "boxing"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:45 - 19:45",
-    "title": "yoga align"
-  },
-  {
-    "club": "moorgate",
-    "time": "19:15 - 20:00",
     "title": "reformer athletic"
+  },
+  {
+    "club": "moorgate",
+    "time": "19:30 - 20:15",
+    "title": "reformer recovery"
   },
   {
     "club": "aldersgate",
@@ -347,42 +287,22 @@
   {
     "club": "aldersgate",
     "time": "07:15 - 08:00",
-    "title": "lift club foundations"
+    "title": "lift club"
   },
   {
     "club": "aldersgate",
     "time": "07:45 - 08:30",
-    "title": "reformer foundations"
-  },
-  {
-    "club": "aldersgate",
-    "time": "08:15 - 09:00",
-    "title": "strength and conditioning"
-  },
-  {
-    "club": "aldersgate",
-    "time": "08:45 - 09:30",
     "title": "reformer align"
   },
   {
     "club": "aldersgate",
     "time": "12:15 - 13:00",
-    "title": "reformer align"
-  },
-  {
-    "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "sound bath"
-  },
-  {
-    "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "strength and conditioning"
-  },
-  {
-    "club": "aldersgate",
-    "time": "13:15 - 14:00",
     "title": "lift club"
+  },
+  {
+    "club": "aldersgate",
+    "time": "12:15 - 13:00",
+    "title": "reformer align"
   },
   {
     "club": "aldersgate",
@@ -392,21 +312,16 @@
   {
     "club": "aldersgate",
     "time": "17:15 - 18:00",
-    "title": "reformer athletic"
+    "title": "reformer align"
   },
   {
     "club": "aldersgate",
-    "time": "17:30 - 18:15",
+    "time": "17:45 - 18:30",
     "title": "lift club"
   },
   {
     "club": "aldersgate",
     "time": "18:15 - 19:00",
-    "title": "reformer align"
-  },
-  {
-    "club": "aldersgate",
-    "time": "19:15 - 20:00",
     "title": "reformer align"
   }
 ]
