@@ -10,6 +10,7 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
   try {
     const browser = await puppeteer.launch({
       headless: "new",
+      sloMo: 80,
       executablePath: 'chromium',
       args: [
         '--no-sandbox',
