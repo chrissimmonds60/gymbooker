@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+require('dotenv').config();
 const schedule  = require('node-schedule');
 let args = process.argv.slice(2);
 const isTest = args.includes('--test');
@@ -139,8 +140,8 @@ async function runBooking() {
     }
     console.log('Filling in login form...');
     await page.waitForSelector('#UserName', { timeout: 10000 });
-    await page.type('#UserName', 'chrissimmonds60@me.com', { delay: 100 });
-    await page.type('#Password', 'vustuk-fuqvow-3jepjA', { delay: 100 });
+    await page.type('#UserName', process.env.VA_USER, { delay: 100 });
+    await page.type('#Password', process.env.VA_PASS, { delay: 100 });
     await page.waitForTimeout(1000);
 
     console.log('Clicking login button...');
