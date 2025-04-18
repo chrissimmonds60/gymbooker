@@ -44,6 +44,7 @@ async function runBooking() {
   try {
     const browser = await puppeteer.launch({
       headless: "new",           // run in modern headless mode
+      executablePath: 'chromium',
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
