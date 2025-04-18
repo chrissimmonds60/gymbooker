@@ -43,9 +43,7 @@ if (new Date() < bookingOpenTime) {
 async function runBooking() {
   try {
     const browser = await puppeteer.launch({
-      headless: true,           // run in headless mode
-      slowMo: 80,               // slow actions a bit so we can watch what happens
-      executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      headless: "new",           // run in modern headless mode
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
