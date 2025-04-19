@@ -29,7 +29,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci --verbose
+        run: npm install --verbose
 
       - name: Run scraper (capture to classes.json)
         run: node list-classes.js > classes.json
