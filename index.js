@@ -16,44 +16,47 @@ console.error = (...args) => {
   originalError(...args);
 };
 const schedule  = require('node-schedule');
-let args = process.argv.slice(2);
-const isTest = args.includes('--test');
-if (isTest) {
-  // remove the test flag so it doesn't interfere with the rest of the args
-  args = args.filter(a => a !== '--test');
-}
-const clubSlug      = args[0];
-const targetDateISO = args[1];
-const targetTime    = args[2];
-const targetClass   = args.slice(3).join(' ').toLowerCase();
 
-if (!clubSlug || !targetDateISO || !targetTime || !targetClass) {
-  console.error('Usage: node index.js <clubSlug> <yyyy-mm-dd> <HH:MM> <className>');
-  process.exit(1);
-}
+if (require.main === module) {
+  let args = process.argv.slice(2);
+  const isTest = args.includes('--test');
+  if (isTest) {
+    // remove the test flag so it doesn't interfere with the rest of the args
+    args = args.filter(a => a !== '--test');
+  }
+  const clubSlug      = args[0];
+  const targetDateISO = args[1];
+  const targetTime    = args[2];
+  const targetClass   = args.slice(3).join(' ').toLowerCase();
 
-// ──────────────────────────────────────────────────────────────
-//  Scheduling: calculate when the class booking opens
-//   (7 days before + 5 minutes after class end; assumes 45 min duration)
-const [hour, minute] = targetTime.split(':').map(Number);
-const classStart   = new Date(`${targetDateISO}T${targetTime}:00`);
-const classEnd     = new Date(classStart.getTime() + 45 * 60000);
-let bookingOpenTime = new Date(classEnd.getTime() - 7 * 24 * 60 * 60000 + 5 * 60000);
-if (isTest) {
-  // schedule test run 10 seconds from now
-  console.log('⚙️  Test mode: overriding bookingOpenTime to 10s from now');
-  bookingOpenTime = new Date(Date.now() + 10000);
-}
+  if (!clubSlug || !targetDateISO || !targetTime || !targetClass) {
+    console.error('Usage: node index.js <clubSlug> <yyyy-mm-dd> <HH:MM> <className>');
+    process.exit(1);
+  }
 
-if (new Date() < bookingOpenTime) {
-  schedule.scheduleJob(bookingOpenTime, runBooking);
-  console.log(`Booking scheduled for ${bookingOpenTime}`);
+  // ──────────────────────────────────────────────────────────────
+  //  Scheduling: calculate when the class booking opens
+  //   (7 days before + 5 minutes after class end; assumes 45 min duration)
+  const [hour, minute] = targetTime.split(':').map(Number);
+  const classStart   = new Date(`${targetDateISO}T${targetTime}:00`);
+  const classEnd     = new Date(classStart.getTime() + 45 * 60000);
+  let bookingOpenTime = new Date(classEnd.getTime() - 7 * 24 * 60 * 60000 + 5 * 60000);
+  if (isTest) {
+    // schedule test run 10 seconds from now
+    console.log('⚙️  Test mode: overriding bookingOpenTime to 10s from now');
+    bookingOpenTime = new Date(Date.now() + 10000);
+  }
+
+  if (new Date() < bookingOpenTime) {
+    schedule.scheduleJob(bookingOpenTime, runBooking);
+    console.log(`Booking scheduled for ${bookingOpenTime}`);
     // prevent process from exiting before scheduled job runs
     process.stdin.resume();
-  // Keep the process alive for the scheduled booking
-  return;
+    // Keep the process alive for the scheduled booking
+    return;
+  }
+  // ──────────────────────────────────────────────────────────────
 }
-// ──────────────────────────────────────────────────────────────
 
 async function runBooking() {
   try {
@@ -291,4 +294,40 @@ async function runBooking() {
   }
 }
 
-runBooking();
+module.exports = {
+  scheduleBooking: async (club, date, time, className) => {
+    // reuse the same scheduling logic but with passed arguments:
+    const args = [club, date, time, className];
+    const isTest = args.includes('--test');
+    const clubSlug = args[0];
+    const targetDateISO = args[1];
+    const targetTime = args[2];
+    const targetClass = args.slice(3).join(' ').toLowerCase();
+
+    if (!clubSlug || !targetDateISO || !targetTime || !targetClass) {
+      throw new Error('Usage: scheduleBooking <clubSlug> <yyyy-mm-dd> <HH:MM> <className>');
+    }
+
+    // ──────────────────────────────────────────────────────────────
+    //  Scheduling: calculate when the class booking opens
+    //   (7 days before + 5 minutes after class end; assumes 45 min duration)
+    const [hour, minute] = targetTime.split(':').map(Number);
+    const classStart = new Date(`${targetDateISO}T${targetTime}:00`);
+    const classEnd = new Date(classStart.getTime() + 45 * 60000);
+    let bookingOpenTime = new Date(classEnd.getTime() - 7 * 24 * 60 * 60000 + 5 * 60000);
+    if (isTest) {
+      // schedule test run 10 seconds from now
+      console.log('⚙️  Test mode: overriding bookingOpenTime to 10s from now');
+      bookingOpenTime = new Date(Date.now() + 10000);
+    }
+
+    if (new Date() < bookingOpenTime) {
+      schedule.scheduleJob(bookingOpenTime, runBooking);
+      console.log(`Booking scheduled for ${bookingOpenTime}`);
+      return bookingOpenTime;
+    }
+
+    await runBooking();
+    return new Date();
+  }
+};
