@@ -1,6 +1,13 @@
 const puppeteer = require('puppeteer-core');
 require('dotenv').config();
 const fs = require('fs');
+
+// create a directory for screenshots
+const screenshotDir = 'screenshots';
+if (!fs.existsSync(screenshotDir)) {
+  fs.mkdirSync(screenshotDir, { recursive: true });
+}
+
 const util = require('util');
 const logFile = fs.createWriteStream('booking.log', { flags: 'a' });
 const originalLog = console.log;
@@ -284,16 +291,32 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
     switch (clicked) {
       case 'book-clicked':
         console.log(`✅ ${targetTime} ${targetClass} – Book button clicked.`);
+        // take a screenshot upon button click outcome
+        await page.screenshot({
+          path: `${screenshotDir}/${targetDateISO}-${targetTime.replace(':','')}-${targetClass}-${clicked}.png`
+        });
         break;
       case 'waitlist-clicked':
         console.log(`ℹ️ ${targetTime} ${targetClass} found – joined the waitlist.`);
+        // take a screenshot upon button click outcome
+        await page.screenshot({
+          path: `${screenshotDir}/${targetDateISO}-${targetTime.replace(':','')}-${targetClass}-${clicked}.png`
+        });
         break;
       case 'button-not-found':
         console.log(`❌ ${targetTime} ${targetClass} row found, but no Book/Waitlist button present.`);
+        // take a screenshot upon button click outcome
+        await page.screenshot({
+          path: `${screenshotDir}/${targetDateISO}-${targetTime.replace(':','')}-${targetClass}-${clicked}.png`
+        });
         break;
       case 'row-not-found':
       default:
         console.log(`❌ Couldn’t find any ${targetTime} ${targetClass} row.`);
+        // take a screenshot upon button click outcome
+        await page.screenshot({
+          path: `${screenshotDir}/${targetDateISO}-${targetTime.replace(':','')}-${targetClass}-${clicked}.png`
+        });
     }
 
     await browser.close();
