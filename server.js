@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { scheduleBooking } = require('./index');
+const scheduleBooking = require('./index');
 
 const app = express();
 app.use(bodyParser.json());
@@ -10,6 +10,11 @@ app.use((req, res, next) => {
   console.log(`\n[${new Date().toISOString()}] ${req.method} ${req.url}`);
   if (Object.keys(req.body).length) console.log('  body:', req.body);
   next();
+});
+
+// quick health-check endpoint
+app.get('/', (req, res) => {
+  res.send('Booking API is up');
 });
 
 app.post('/schedule-booking', async (req, res) => {
