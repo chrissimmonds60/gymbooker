@@ -1,5 +1,7 @@
 // list‑classes.js
 const puppeteer = require('puppeteer');
+// simple sleep helper in lieu of page.waitForTimeout()
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 (async () => {
   /* ───────────────────── 1. launch headed for debugging ───────────────────── */
@@ -58,7 +60,7 @@ const puppeteer = require('puppeteer');
         .find(el => el.getAttribute('datetime') === d);
       t?.closest('button, a, div')?.click();
     }, dateISO);
-    await page.waitForTimeout(1200);
+    await sleep(1200);
   }
 
   /* ───────────────────── 3. log in ───────────────────── */
