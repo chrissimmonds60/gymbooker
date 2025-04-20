@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { scheduleBooking } = require('./index');
+const scheduleBooking = require('./index');
 
 const app = express();
 app.use(bodyParser.json());
@@ -25,22 +25,18 @@ app.get('/', (req, res) => {
   res.send('Booking API is up');
 });
 
-app.post('/schedule-booking', async (req, res) => {
+app.post('/schedule-booking', (req, res) => {
   const { club, date, time, className } = req.body;
   if (!club || !date || !time || !className) {
     console.log('  → 400 missing fields');
     return res.status(400).json({ error: 'missing fields' });
   }
 
-  try {
-    console.log(`  → scheduling booking: ${club} ${date} ${time} "${className}"`);
-    const result = await scheduleBooking(club, date, time, className);
-    console.log('  ← result:', result);
-    res.json({ success: true, scheduledFor: result });
-  } catch (err) {
-    console.error('🔴 Booking error stack:\n', err.stack || err);
-    res.status(500).json({ error: 'booking failed' });
-  }
+  console.log(`  → scheduling booking: ${club} ${date} ${time} "${className}"`);
+  scheduleBooking(club, date, time, className)
+    .then(result => console.log('  ← scheduledFor:', result))
+    .catch(err => console.error('  Booking job failed:', err));
+  return res.json({ success: true, message: 'Booking job scheduled' });
 });
 
 const PORT = process.env.PORT || 3000;
