@@ -11,6 +11,6 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "node-schedule": "^2.1.1",
-    "puppeteer": "^21.11.0"
+    "puppeteer": "^24.6.1"
   }
 }
