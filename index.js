@@ -300,7 +300,19 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
           // scroll into view & click
           await button.evaluate(b => b.scrollIntoView({ block: 'center' }));
           await button.click().catch(() => null);
-          clicked = 'book-clicked';
+          
+          // wait up to 10s for the "Cancel booking" text on any button in this row
+          try {
+            await page.waitForFunction(
+              el => Array.from(el.querySelectorAll('button'))
+                       .some(b => b.textContent.trim().toLowerCase() === 'cancel booking'),
+              { timeout: 10000 },
+              row
+            );
+            clicked = 'book-confirmed';
+          } catch {
+            clicked = 'book-clicked';
+          }
           break;
         }
         // wait briefly before retrying
