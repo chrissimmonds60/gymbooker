@@ -243,7 +243,7 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
     // Give the page 5 seconds to settle (lazy‑loading, animations, etc.)
     await sleep(5000);
 
-    console.log('📋 Searching for 18:45 Pilates Athletic class...');
+    console.log(`📋 Searching for ${targetTime} ${targetClass} class...`);
 
     const clicked = await page.evaluate((targetDateISO, TARGET_TIME, TARGET_CLASS) => {
       const targetRow = Array.from(
@@ -283,17 +283,17 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
 
     switch (clicked) {
       case 'book-clicked':
-        console.log('✅ 18:45 Pilates Athletic – Book button clicked.');
+        console.log(`✅ ${targetTime} ${targetClass} – Book button clicked.`);
         break;
       case 'waitlist-clicked':
-        console.log('ℹ️ 18:45 Pilates Athletic found – joined the waitlist.');
+        console.log(`ℹ️ ${targetTime} ${targetClass} found – joined the waitlist.`);
         break;
       case 'button-not-found':
-        console.log('❌ 18:45 Pilates Athletic row found, but no Book/Waitlist button present.');
+        console.log(`❌ ${targetTime} ${targetClass} row found, but no Book/Waitlist button present.`);
         break;
       case 'row-not-found':
       default:
-        console.log('❌ Couldn’t find any 18:45 Pilates Athletic row.');
+        console.log(`❌ Couldn’t find any ${targetTime} ${targetClass} row.`);
     }
 
     await browser.close();
