@@ -289,8 +289,8 @@ async function runBooking() {
     }
 
     await browser.close();
-  } catch (err) {
-    console.error('Unhandled error in script:', err);
+   } catch (err) {
+    console.error('🔴 Unhandled error in script:\n', err.stack || err);
   }
 }
 
