@@ -60,17 +60,18 @@ if (require.main === module) {
 
 async function runBooking() {
   try {
-    const browser = await puppeteer.launch({
-      headless: "new",           // run in modern headless mode
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--start-maximized'
-      ],
-      defaultViewport: null,
-    });
+ const browser = await puppeteer.launch({
+  headless: true,
+  executablePath: '/usr/bin/chromium-browser',
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-gpu',
+    '--disable-dev-shm-usage',
+    '--start-maximized'
+  ],
+  defaultViewport: null,
+});
 
     const page = await browser.newPage();
     
