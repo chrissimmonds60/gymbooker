@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 require('dotenv').config();
 const fs = require('fs');
 const util = require('util');
@@ -61,7 +61,8 @@ if (require.main === module) {
 async function runBooking() {
   try {
     const browser = await puppeteer.launch({
-      headless: "new",           // run in modern headless mode
+      headless: true,
+      executablePath: '/usr/bin/chromium-browser',
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
