@@ -1,0 +1,50 @@
+ name: Deploy static content to Pages
+ on:
+   push:
+     branches: ["main"]
+   workflow_dispatch:
+
+ permissions:
+   contents: read
+   pages: write
+   id-token: write
+
+ concurrency:
+   group: "pages"
+   cancel-in-progress: false
+
+ jobs:
+   deploy:
+     environment:
+       name: github-pages
+       url: ${{ steps.deployment.outputs.page_url }}
+     runs-on: ubuntu-latest
+     steps:
+-      - name: Checkout
+-        uses: actions/checkout@v4
++      - name: Checkout
++        uses: actions/checkout@v4
++        with:
++          fetch-depth: 0
++          submodules: false   # ← disable the failing submodule fetch
+
++      # (optional) ensure GitHub Pages doesn’t run Jekyll
++      - name: Disable Jekyll processing
++        run: echo 'jekyll: false' > docs/.nojekyll
+
+       - name: Setup Pages
+         uses: actions/configure-pages@v5
+
+-      - name: Upload artifact
+-        uses: actions/upload-pages-artifact@v4
+-        with:
+-          # Upload entire repository
+-          path: '.'
++      - name: Upload Pages artifact
++        uses: actions/upload-pages-artifact@v4
++        with:
++          path: 'docs'    # ← only deploy your docs/ folder
+
+       - name: Deploy to GitHub Pages
+         id: deployment
+         uses: actions/deploy-pages@v4
