@@ -312,6 +312,11 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
     }
 
     switch (clicked) {
+      case 'book-confirmed':
+        console.log(`✅ ${targetTime} ${targetClass} – Booking confirmed.`);
+        // take screenshot on confirmation
+        await page.screenshot({ path: `${screenshotDir}/${targetDateISO}-${targetTime.replace(':','')}-${targetClass}-confirmed.png` });
+        break;
       case 'book-clicked':
         console.log(`✅ ${targetTime} ${targetClass} – Book button clicked.`);
         // take a screenshot upon button click outcome
