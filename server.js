@@ -4,6 +4,14 @@ const scheduleBooking = require('./index');
 
 const app = express();
 app.use(bodyParser.json());
+// Log startup and catch uncaught errors
+console.log('📡 Starting Booking‑API process, PID:', process.pid);
+process.on('uncaughtException', err => {
+  console.error('🔴 Uncaught exception:', err);
+});
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('🔴 Unhandled rejection at:', promise, 'reason:', reason);
+});
 
 // log every request
 app.use((req, res, next) => {
@@ -36,6 +44,9 @@ app.post('/schedule-booking', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () =>
+const server = app.listen(PORT, '0.0.0.0', () =>
   console.log(`🏃‍♂️  Booking‑API listening on http://0.0.0.0:${PORT}`)
 );
+server.on('error', err => {
+  console.error('🔴 HTTP server error:', err);
+});
