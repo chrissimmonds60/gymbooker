@@ -38,7 +38,7 @@ app.post('/schedule-booking', async (req, res) => {
     console.log('  ← result:', result);
     res.json({ success: true, scheduledFor: result });
   } catch (err) {
-    console.error('  Booking error:', err);
+    console.error('🔴 Booking error stack:\n', err.stack || err);
     res.status(500).json({ error: 'booking failed' });
   }
 });
