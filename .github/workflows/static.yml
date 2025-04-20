@@ -1,3 +1,4 @@
+# .github/workflows/static.yml
 name: Deploy static content to Pages
 
 on:
@@ -6,9 +7,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read       # allow checkout
+  pages: write         # allow Pages deployment
+  id-token: write      # allow OIDC for deploy-pages
 
 concurrency:
   group: pages
@@ -17,20 +18,25 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # 1) Check out your repo (disable submodules)
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: false
 
+      # 2) Prevent Jekyll from processing your files
       - name: Disable Jekyll processing
         run: echo 'jekyll:false' > docs/.nojekyll
 
+      # 3) Upload only the docs/ folder as the Pages artifact
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
           path: docs
 
+      # 4) Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
