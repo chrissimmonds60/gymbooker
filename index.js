@@ -169,6 +169,19 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
     } catch (err) {
       console.log('Error checking or clicking cookie banner:', err);
     }
+    // ──────────────────────────────────────────────────────────────
+    //  Dismiss any "notifications" prompt overlay that might block booking
+    // ──────────────────────────────────────────────────────────────
+    try {
+      const [noThanksBtn] = await page.$x("//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'no thanks')]");
+      if (noThanksBtn) {
+        await noThanksBtn.click();
+        console.log('🔕 Dismissed notifications prompt');
+        await sleep(1000);
+      }
+    } catch (e) {
+      // ignore if not present
+    }
     console.log('Filling in login form...');
     await page.waitForSelector('#UserName', { timeout: 10000 });
     await page.type('#UserName', process.env.VA_USER, { delay: 100 });
