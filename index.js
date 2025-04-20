@@ -264,42 +264,52 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
     await sleep(5000);
 
     console.log(`📋 Searching for ${targetTime} ${targetClass} class...`);
+    // gather all rows
+    const rows = await page.$$('dt.va__accordion-section');
+    let clicked = 'row-not-found';
 
-    const clicked = await page.evaluate((targetDateISO, TARGET_TIME, TARGET_CLASS) => {
-      const targetRow = Array.from(
-        document.querySelectorAll('dt.va__accordion-section')
-      ).find(dt => {
-        const rowDate = dt.querySelector('.class-timetable-panel__class-date time')
-          ?.getAttribute('datetime') || '';
-        if (rowDate !== targetDateISO) return false;
+    for (const row of rows) {
+      // check date
+      const rowDate = await row.$eval(
+        '.class-timetable-panel__class-date time',
+        el => el.getAttribute('datetime')
+      ).catch(() => '');
+      if (rowDate !== targetDateISO) continue;
 
-        const timeTxt =
-          dt.querySelector('.class-timetable__class-time time')?.textContent
-            .trim()
-            .toLowerCase() ?? '';
-        if (!timeTxt.startsWith(TARGET_TIME)) return false;
+      // check time
+      const timeTxt = await row.$eval(
+        '.class-timetable__class-time time',
+        el => el.textContent.trim().toLowerCase()
+      ).catch(() => '');
+      if (!timeTxt.startsWith(targetTime)) continue;
 
-        const titles = Array.from(
-          dt.querySelectorAll('.class-timetable__class-title')
-        ).map(t => t.textContent.trim().toLowerCase());
+      // check class title
+      const titles = await row.$$eval(
+        '.class-timetable__class-title',
+        nodes => nodes.map(n => n.textContent.trim().toLowerCase())
+      );
+      if (!titles.includes(targetClass)) {
+        clicked = 'row-not-found';
+        continue;
+      }
 
-        return titles.includes(TARGET_CLASS);
-      });
-
-      if (!targetRow) return 'row-not-found';
-
-      const button =
-        targetRow.querySelector(
-          'button.class-timetable__book-button--available, button.class-timetable__book-button--waitlist'
-        );
-
-      if (!button) return 'button-not-found';
-
-      button.click();
-      return button.classList.contains('class-timetable__book-button--available')
-        ? 'book-clicked'
-        : 'waitlist-clicked';
-    }, targetDateISO, targetTime, targetClass);
+      // attempt clicking Book button up to 3 times
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        const button = await row.$('button.class-timetable__book-button--available');
+        if (button) {
+          // scroll into view & click
+          await button.evaluate(b => b.scrollIntoView({ block: 'center' }));
+          await button.click().catch(() => null);
+          clicked = 'book-clicked';
+          break;
+        }
+        // wait briefly before retrying
+        console.log(`⏳ Retry ${attempt} – waiting for Book button…`);
+        await sleep(2000);
+      }
+      // stop after first matching row
+      break;
+    }
 
     switch (clicked) {
       case 'book-clicked':
