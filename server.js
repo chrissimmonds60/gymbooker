@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const scheduleBooking = require('./index');
+const { scheduleBooking } = require('./index');
 
 const app = express();
 app.use(bodyParser.json());
