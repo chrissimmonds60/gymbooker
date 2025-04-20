@@ -55,7 +55,7 @@ if (require.main === module) {
   }
 
   if (new Date() < bookingOpenTime) {
-    schedule.scheduleJob(bookingOpenTime, runBooking);
+    schedule.scheduleJob(bookingOpenTime, () => runBooking(clubSlug, targetDateISO, targetTime, targetClass));
     console.log(`Booking scheduled for ${bookingOpenTime}`);
     // prevent process from exiting before scheduled job runs
     process.stdin.resume();
@@ -65,7 +65,7 @@ if (require.main === module) {
   // ──────────────────────────────────────────────────────────────
 }
 
-async function runBooking() {
+async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
   try {
     const browser = await puppeteer.launch({
       headless: true,
@@ -330,12 +330,12 @@ module.exports = {
     }
 
     if (new Date() < bookingOpenTime) {
-      schedule.scheduleJob(bookingOpenTime, runBooking);
+      schedule.scheduleJob(bookingOpenTime, () => runBooking(clubSlug, targetDateISO, targetTime, targetClass));
       console.log(`Booking scheduled for ${bookingOpenTime}`);
       return bookingOpenTime;
     }
 
-    await runBooking();
+    await runBooking(clubSlug, targetDateISO, targetTime, targetClass);
     return new Date();
   }
 };
