@@ -1,6 +1,6 @@
 name: Deploy static content to Pages
 
-on:
+on: 
   push:
     branches: ["main"]
   workflow_dispatch:
