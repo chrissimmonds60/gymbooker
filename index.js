@@ -299,20 +299,26 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
         if (button) {
           // scroll into view & click
           await button.evaluate(b => b.scrollIntoView({ block: 'center' }));
-          await button.click().catch(() => null);
-          
-          // wait up to 10s for the "Cancel booking" text on any button in this row
-          try {
-            await page.waitForFunction(
-              el => Array.from(el.querySelectorAll('button'))
-                       .some(b => b.textContent.trim().toLowerCase() === 'cancel booking'),
-              { timeout: 10000 },
-              row
-            );
-            clicked = 'book-confirmed';
-          } catch {
-            clicked = 'book-clicked';
-          }
+              await button.click().catch(() => null);
+              try {
+                await page.waitForSelector('button:has-text("Cancel Booking")', { timeout: 5000 });
+                console.log("✅ Booking confirmed – button changed to 'Cancel Booking'");
+              } catch (err) {
+                console.error("❌ Booking failed – button did not change to 'Cancel Booking'");
+              }
+              
+              // wait up to 10s for the "Cancel booking" text on any button in this row
+              try {
+                await page.waitForFunction(
+                  el => Array.from(el.querySelectorAll('button'))
+                           .some(b => b.textContent.trim().toLowerCase() === 'cancel booking'),
+                  { timeout: 10000 },
+                  row
+                );
+                clicked = 'book-confirmed';
+              } catch {
+                clicked = 'book-clicked';
+              }
           break;
         }
         // wait briefly before retrying
