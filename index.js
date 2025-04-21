@@ -296,6 +296,8 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
       const bookButtonSelector = 'button.class-timetable__book-button--available';
       const bookButton = await row.$(bookButtonSelector);
           if (bookButton) {
+            await bookButton.evaluate(b => b.scrollIntoView({ block: 'center', behavior: 'instant' }));
+            await sleep(1000);
             await bookButton.click();
             console.log('🔄 Book button clicked, waiting for booking confirmation...');
 
