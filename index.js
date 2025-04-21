@@ -298,7 +298,7 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
       if (bookButton) {
         // Click the book button
         await bookButton.click();
-        await page.waitForTimeout(10000); // Wait 10 seconds to allow booking to process
+        await sleep(10000); // Wait 10 seconds to allow booking to process
 
         // Wait for the button text to change to "Cancel Booking"
         try {
