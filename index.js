@@ -293,31 +293,54 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
         continue;
       }
 
-      const bookButtonSelector = 'button.class-timetable__book-button--available';
-      const bookButton = await row.$(bookButtonSelector);
-          if (bookButton) {
-            await bookButton.evaluate(b => b.scrollIntoView({ block: 'center', behavior: 'instant' }));
-            await sleep(1000);
-            await bookButton.click();
-            console.log('🔄 Book button clicked, waiting for booking confirmation...');
+      // Call the booking API directly instead of clicking the button
+      const clubId = await page.evaluate(() => {
+        const el = document.querySelector('[data-club-id]');
+        if (!el) {
+          console.log('❌ Could not find [data-club-id] element.');
+          console.log('📄 document.body.innerHTML snapshot:', document.body.innerHTML.slice(0, 1000));
+        }
+        return el ? el.getAttribute('data-club-id') : null;
+      });
 
-            try {
-              await page.waitForFunction(
-                selector => {
-                  const btn = document.querySelector(selector);
-                  return btn && btn.textContent.toLowerCase().includes('cancel booking');
-                },
-                { timeout: 15000 }, // wait up to 15s for confirmation
-                bookButtonSelector
-              );
-              console.log('✅ Booking confirmed.');
-              clicked = 'book-confirmed';
-            } catch (e) {
-              const btn = await page.$(bookButtonSelector);
-              const btnText = btn ? await page.evaluate(el => el.textContent, btn) : 'N/A';
-              console.log(`❌ Booking failed – button text after click: "${btnText}"`);
-              clicked = 'book-clicked';
+      const classId = await row.evaluate(rowEl => {
+        const el = rowEl.querySelector('[data-class-id]');
+        if (!el) {
+          console.log('❌ Could not find [data-class-id] inside this class row.');
+          console.log('📄 row HTML snapshot:', rowEl.innerHTML.slice(0, 1000));
+        }
+        return el ? el.getAttribute('data-class-id') : null;
+      });
+
+      if (clubId && classId) {
+        console.log(`📡 Sending booking request to API: clubId=${clubId}, classId=${classId}`);
+        const result = await page.evaluate(async (clubId, classId) => {
+          const response = await fetch('/api/Class/BookClass', {
+            method: 'POST',
+            body: JSON.stringify({ clubId, classId }),
+            credentials: 'include',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
             }
+          });
+
+          if (!response.ok) return { error: 'API request failed', status: response.status };
+
+          const data = await response.json();
+          return data;
+        }, clubId, classId);
+
+        if (result && !result.error) {
+          console.log('✅ Booking confirmed via API.');
+          clicked = 'book-confirmed';
+        } else {
+          console.log(`❌ Booking API error: ${JSON.stringify(result)}`);
+          clicked = 'book-failed';
+        }
+      } else {
+        console.log('❌ Missing clubId or classId for API booking.');
+        clicked = 'book-failed';
       }
       // stop after first matching row
       break;
