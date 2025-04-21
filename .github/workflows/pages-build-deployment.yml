@@ -1,4 +1,5 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [ main ]
@@ -11,7 +12,10 @@ permissions:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository (no submodules)
         uses: actions/checkout@v4
