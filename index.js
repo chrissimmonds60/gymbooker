@@ -295,29 +295,27 @@ async function runBooking(clubSlug, targetDateISO, targetTime, targetClass) {
 
       const bookButtonSelector = 'button.class-timetable__book-button--available';
       const bookButton = await row.$(bookButtonSelector);
-      if (bookButton) {
-        // Click the book button
-        await bookButton.click();
-        await sleep(10000); // Wait 10 seconds to allow booking to process
+          if (bookButton) {
+            await bookButton.click();
+            console.log('🔄 Book button clicked, waiting for booking confirmation...');
 
-        // Wait for the button text to change to "Cancel Booking"
-        try {
-          await page.waitForFunction(
-            selector => {
-              const btn = document.querySelector(selector);
-              return btn && btn.textContent.toLowerCase().includes('cancel booking');
-            },
-            { timeout: 5000 },
-            bookButtonSelector
-          );
-          console.log('✅ Booking confirmed.');
-          clicked = 'book-confirmed';
-        } catch (e) {
-          const btn = await page.$(bookButtonSelector);
-          const btnText = btn ? await page.evaluate(el => el.textContent, btn) : 'N/A';
-          console.log(`❌ Booking failed – button text after click: "${btnText}"`);
-          clicked = 'book-clicked';
-        }
+            try {
+              await page.waitForFunction(
+                selector => {
+                  const btn = document.querySelector(selector);
+                  return btn && btn.textContent.toLowerCase().includes('cancel booking');
+                },
+                { timeout: 15000 }, // wait up to 15s for confirmation
+                bookButtonSelector
+              );
+              console.log('✅ Booking confirmed.');
+              clicked = 'book-confirmed';
+            } catch (e) {
+              const btn = await page.$(bookButtonSelector);
+              const btnText = btn ? await page.evaluate(el => el.textContent, btn) : 'N/A';
+              console.log(`❌ Booking failed – button text after click: "${btnText}"`);
+              clicked = 'book-clicked';
+            }
       }
       // stop after first matching row
       break;
