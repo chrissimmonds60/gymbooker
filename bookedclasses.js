@@ -22,7 +22,7 @@ async function getBookedClasses(username, password) {
       'https://www.virginactive.co.uk/login?sf_cntrl_id=ctl00%24Body%24C001&ReturnUrl=https%3A%2F%2Fwww.virginactive.co.uk',
       { waitUntil: 'networkidle2' }
     );
-    console.log('[getBookedClasses] Reached login page');
+    console.log('[getBookedClasses] Login page loaded');
 
     // Accept cookie banner if present
     try {
@@ -51,16 +51,21 @@ async function getBookedClasses(username, password) {
       // ignore if not present
     }
 
+    console.log('[getBookedClasses] Typing username');
     // Fill in credentials
     await page.type('#UserName', username, { delay: 50 });
+    console.log('[getBookedClasses] Typing password');
     await page.type('#Password', password, { delay: 50 });
 
+    console.log('[getBookedClasses] Submitting login form');
     // Submit and wait for navigation
     await Promise.all([
       page.click('button[type="submit"]'),
-      page.waitForNavigation({ waitUntil: 'networkidle2' })
+      page.waitForNavigation({ waitUntil: 'networkidle2', timeout: 60000 })
     ]);
+    console.log('[getBookedClasses] Navigation after login complete');
 
+    console.log('[getBookedClasses] Fetching booked classes from API');
     // Fetch booked classes via the API, handling invalid JSON
     const bookedClasses = await page.evaluate(async () => {
       const response = await fetch('/api/class/getBookedClasses', {
@@ -80,6 +85,7 @@ async function getBookedClasses(username, password) {
     });
 
     await browser.close();
+    console.log('[getBookedClasses] Browser closed');
     console.log('[getBookedClasses] Returning booked classes:', bookedClasses);
     return bookedClasses;
   } catch (err) {
