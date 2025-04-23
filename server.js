@@ -58,7 +58,7 @@ app.post('/booked-classes', async (req, res) => {
 
 // endpoint to book a class
 app.post('/book-class', async (req, res) => {
-  const { username, password, classInstanceId } = req.body;
+  const { username, password, clubId, classInstanceId } = req.body;
   if (!username || !password || !classInstanceId) {
     console.log('  → 400 missing fields');
     return res.status(400).json({ error: 'missing fields' });
@@ -66,7 +66,7 @@ app.post('/book-class', async (req, res) => {
 
   try {
     const bookClass = require('./bookclass');
-    const result = await bookClass(username, password, classInstanceId);
+    const result = await bookClass(classInstanceId, clubId, username, password);
     res.json({ success: true, result });
   } catch (err) {
     console.error('🔴 Error booking class:', err);
