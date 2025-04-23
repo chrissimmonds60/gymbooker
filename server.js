@@ -56,6 +56,24 @@ app.post('/booked-classes', async (req, res) => {
   }
 });
 
+// endpoint to book a class
+app.post('/book-class', async (req, res) => {
+  const { username, password, classInstanceId } = req.body;
+  if (!username || !password || !classInstanceId) {
+    console.log('  → 400 missing fields');
+    return res.status(400).json({ error: 'missing fields' });
+  }
+
+  try {
+    const { bookClass } = require('./bookclass');
+    const result = await bookClass(username, password, classInstanceId);
+    res.json({ success: true, result });
+  } catch (err) {
+    console.error('🔴 Error booking class:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, '0.0.0.0', () =>
   console.log(`🏃‍♂️  Booking‑API listening on http://0.0.0.0:${PORT}`)
