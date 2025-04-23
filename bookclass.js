@@ -1,5 +1,10 @@
 const puppeteer = require("puppeteer-core");
 
+// On server, use the system Chromium path
+const executablePath = process.platform === "darwin"
+  ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  : "/usr/bin/chromium-browser";
+
 async function bookClass(classSessionId, clubId, email, password) {
   console.log('[bookClass] Starting booking for user:', email);
   const browser = await puppeteer.launch({
