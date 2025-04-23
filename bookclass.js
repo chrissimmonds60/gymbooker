@@ -1,9 +1,13 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
 
 async function bookClass(classSessionId, clubId, email, password) {
-  const browser = await puppeteer.launch({ headless: "new" });
-  const page = await browser.newPage();
-
+ const browser = await puppeteer.launch({
+   executablePath: '/usr/bin/chromium-browser',
+   headless: true,
+   args: ['--no-sandbox', '--disable-setuid-sandbox'],
+   defaultViewport: null
+ });
+ const page = await browser.newPage();
   try {
     await page.goto("https://www.virginactive.co.uk/");
     await page.click("a[href='/account/login']");
