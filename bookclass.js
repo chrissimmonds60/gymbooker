@@ -54,3 +54,5 @@ const clubId = 408;
 const email = "your@email.com"; // Replace with actual email passed from app
 const password = "yourPassword"; // Replace with actual password passed from app
 bookClass(sessionId, clubId, email, password);
+
+module.exports = bookClass;
