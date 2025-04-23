@@ -12,7 +12,7 @@ async function bookClass(classSessionId, clubId, email, password) {
  await page.setDefaultNavigationTimeout(60000);
   try {
     console.log("[bookClass] Navigating to home page");
-    await page.goto("https://www.virginactive.co.uk/", { waitUntil: "networkidle2", timeout: 60000 });
+    await page.goto("https://www.virginactive.co.uk/login", { waitUntil: "networkidle2", timeout: 60000 });
     console.log("[bookClass] Home page loaded");
     console.log("[bookClass] Clicking login link");
     await page.click("a[href='/account/login']");
