@@ -1,16 +1,17 @@
 // list‑classes.js
+require('dotenv').config();
 const puppeteer = require('puppeteer');
 // simple sleep helper in lieu of page.waitForTimeout()
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 (async () => {
   /* ───────────────────── 1. launch headed for debugging ───────────────────── */
+  console.log("🚀 Launching browser...");
   const browser = await puppeteer.launch({
-  headless: 'new',          // run in headless (Chromium >=109); use true if on older versions
+  headless: true,          // run in headless (Chromium >=109); use true if on older versions
   // slowMo: 80,            // you can keep this if you still want a little delay
   // devtools: false,
-  executablePath: '/usr/bin/chromium-browser',   // point to the system Chromium
-  args: [
+    args: [
     '--no-sandbox',
     '--disable-setuid-sandbox',
     '--disable-gpu',
@@ -20,6 +21,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   defaultViewport: { width: 1920, height: 1080 },
 });
   const page = await browser.newPage();
+  console.log("🧭 New page opened.");
 
   /* ───────────────────── 2. helpers ───────────────────── */
   const todayPlus8 = (() => {
@@ -64,12 +66,18 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /* ───────────────────── 3. log in ───────────────────── */
+  console.log("🔐 Navigating to login page...");
   await page.goto('https://www.virginactive.co.uk/login', { waitUntil: 'networkidle2' });
   await clickCookieBanner();
-  await page.type('#UserName',      process.env.VA_USER, { delay: 60 });
-  await page.type('#Password',      process.env.VA_PASS, { delay: 60 });
+  if (!process.env.VA_USER || !process.env.VA_PASS) {
+    console.error("❌ Environment variables VA_USER or VA_PASS not set.");
+    process.exit(1);
+  }
+  await page.type('#UserName', process.env.VA_USER, { delay: 60 });
+  await page.type('#Password', process.env.VA_PASS, { delay: 60 });
   await page.click('button[type="submit"]');
   await page.waitForSelector('.login-container__user-greeting', { timeout: 30000 });
+  console.log("✅ Login successful.");
 
   /* ───────────────────── 4. timetable page ───────────────────── */
   // ─────────── iterate through all clubs we care about ────────────
@@ -84,6 +92,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   const allClasses = [];
 
   for (const club of clubs) {
+    console.log(`📅 Navigating to timetable for ${club.name} (${club.slug})`);
     const url = `https://www.virginactive.co.uk/clubs/${club.slug}/timetable?activeDay=${todayPlus8}`;
     await page.goto(url, { waitUntil: 'networkidle2' });
 
@@ -97,8 +106,9 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     await autoScroll();
 
     // harvest rows for this club / date
-    const clubClasses = await page.evaluate((targetDate, clubName) => {
+    const clubClasses = await page.evaluate((targetDate, clubName, clubSlug) => {
       const rows = Array.from(document.querySelectorAll('dt.va__accordion-section'));
+      const clubId = document.querySelector('#va__class-timetable-finder')?.getAttribute('data-club-id') || 'unknown';
       return rows.flatMap(dt => {
         const rowDate = dt.querySelector('.class-timetable-panel__class-date time')
                          ?.getAttribute('datetime');
@@ -107,10 +117,31 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
                          ?.textContent.trim();
         const titles = [...dt.querySelectorAll('.class-timetable__class-title')]
                          .map(t => t.textContent.trim().toLowerCase());
-        return titles.map(title => ({ club: clubName, time, title }));
+        return titles.map(title => {
+          const classId = dt.getAttribute('data-id') || 'unknown';
+          return { club: clubName, time, title, clubId, classId };
+        });
       });
-    }, todayPlus8, club.name);
+    }, todayPlus8, club.name, club.slug);
 
+    // fetch API timetable data to find real classIds
+    const apiTimetable = await page.evaluate(async (id) => {
+      const res = await fetch(`/api/club/getclubtimetable?id=${id}`, {
+        credentials: 'include'
+      });
+      return await res.json();
+    }, clubClasses[0]?.clubId);
+
+    if (apiTimetable?.TimetableEntries?.length) {
+      for (const entry of clubClasses) {
+        const match = apiTimetable.TimetableEntries.find(e =>
+          e.ClassName?.toLowerCase().includes(entry.title) &&
+          e.ClassTime?.includes(entry.time?.split(" - ")[0]));
+        if (match?.Id) entry.classId = match.Id.toString();
+      }
+    }
+
+    console.log(`📦 Found ${clubClasses.length} classes for ${club.name}`);
     allClasses.push(...clubClasses);
   }
 

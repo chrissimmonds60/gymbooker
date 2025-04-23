@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { scheduleBooking } = require('./index');
+const { getBookedClasses } = require('./bookedclasses');
 
 const app = express();
 app.use(bodyParser.json());
@@ -37,6 +38,22 @@ app.post('/schedule-booking', (req, res) => {
     .then(result => console.log('  ← scheduledFor:', result))
     .catch(err => console.error('  Booking job failed:', err));
   return res.json({ success: true, message: 'Booking job scheduled' });
+});
+
+// endpoint to fetch booked classes
+app.post('/booked-classes', async (req, res) => {
+  const { username, password } = req.body;
+  if (!username || !password) {
+    console.log('  → 400 missing credentials');
+    return res.status(400).json({ error: 'missing credentials' });
+  }
+  try {
+    const result = await getBookedClasses(username, password);
+    res.json(result);
+  } catch (err) {
+    console.error('🔴 Error fetching booked classes:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 const PORT = process.env.PORT || 3000;

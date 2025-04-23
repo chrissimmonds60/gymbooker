@@ -1,0 +1,2693 @@
+{
+  "error": null,
+  "data": {
+    "clubId": 408,
+    "clubName": "Wimbledon Worple Road",
+    "classes": [
+      {
+        "id": 23,
+        "name": "aqua",
+        "type": "Other",
+        "typeId": 2401,
+        "description": "<p>Like a cardio class but in the pool, Aqua is perfect if you&rsquo;re just starting your fitness journey, or coming back from an injury. This class works your heart and <g class=\"gr_ gr_9 gr-alert gr_gramm gr_inline_cards gr_run_anim Punctuation only-del replaceWithoutSep\" id=\"9\" data-gr-id=\"9\">lungs,</g> but gives your joints a break.<font size=\"-1\"></font></p>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/class-images/2018_aqua.tmb-wide-dt.jpg?sfvrsn=83c7440f_3",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/aqua",
+        "dimensionIds": [
+          "562492d6-a829-48d4-b5fc-dcdf8e8f58ae",
+          "c370d27e-ad10-4678-a969-e797f3c0a637"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 47032,
+        "name": "cycle power",
+        "type": "Cycle",
+        "typeId": 603,
+        "description": "<p>A performance based cycle class that\nbrings the euphoric highs of riding outdoors into a music driven studio. Track\nyour personal bests and create your own benchmark for success!&nbsp;</p><strong></strong>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/power_cycle.tmb-wide-dt.jpg?sfvrsn=8b6be225_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/power",
+        "dimensionIds": [
+          "630dc1ea-4455-41ad-8cd1-fb0df216c221",
+          "562492d6-a829-48d4-b5fc-dcdf8e8f58ae",
+          "a4584d8d-63bc-45e9-b27c-c49adfe03783"
+        ],
+        "whatToBringIds": [
+          "c73f90fe-8a58-4920-a354-2e89510fc90a",
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 47033,
+        "name": "cycle tempo",
+        "type": "Cycle",
+        "typeId": 603,
+        "description": "<p>Ride to the beat and get lost in the\nmusic. If upper body movement is your thing, you can groove along to some\nuplifting tunes or you can just ride &ndash; whatever gets you moving.</p>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/tempo_cycle_.tmb-wide-dt.jpg?sfvrsn=8c05ee22_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/tempo",
+        "dimensionIds": [
+          "630dc1ea-4455-41ad-8cd1-fb0df216c221",
+          "562492d6-a829-48d4-b5fc-dcdf8e8f58ae",
+          "a4584d8d-63bc-45e9-b27c-c49adfe03783"
+        ],
+        "whatToBringIds": [
+          "c73f90fe-8a58-4920-a354-2e89510fc90a",
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 77813,
+        "name": "lift club",
+        "type": "Strength",
+        "typeId": 607,
+        "description": "Build your strength and develop your technique in our Lift Club class.",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/club-imagery/wimbledon/wimbledon-oct-23/virgin-active_wimbledon_gex_photos_weights3.tmb-wide-dt.jpg?sfvrsn=dee49978_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/lift-club",
+        "dimensionIds": [
+          "0308d299-4192-4782-9391-688d7b1de11b",
+          "a4584d8d-63bc-45e9-b27c-c49adfe03783"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 68202,
+        "name": "move club",
+        "type": "Strength",
+        "typeId": 607,
+        "description": "Stay active through low-intensity movement in a group class made for mature adults or those recovering from injury.",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/move-club.tmb-wide-dt.png?sfvrsn=7ed83f94_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/move-club",
+        "dimensionIds": [
+          "c370d27e-ad10-4678-a969-e797f3c0a637"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 78001,
+        "name": "pilates align.",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div>Focus on improving posture and muscular imbalances, increasing mobility in joints and deepening core strength. The class uses principles of Joseph Pilates to improve posture, function and form.<br /></div><div><br /></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/matwork-pilates-2022/pilates-contemporary.tmb-wide-dt.jpg?sfvrsn=3421dd2e_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/pilates-align-",
+        "dimensionIds": [
+          "47fd6cf8-00fa-48d4-a454-1961986fafcc",
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 78002,
+        "name": "pilates athletic.",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<span style=\"background-color:initial;font-family:inherit;font-size:inherit;text-align:inherit;text-transform:inherit;white-space:inherit;word-spacing:normal;caret-color:auto;\">An athletic Pilates Matwork class designed to sculpt, tone and define the body. Challenge your perception of a Pilates class with a focus on endurance.</span>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/matwork-pilates-2022/pilates-class-new.tmb-wide-dt.png?sfvrsn=8caaa669_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/pilates-athletic-",
+        "dimensionIds": [
+          "47fd6cf8-00fa-48d4-a454-1961986fafcc",
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 78003,
+        "name": "pilates express",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/matwork-pilates-2022/matwork-pilates-express.tmb-wide-dt.jpg?sfvrsn=464edcf9_1",
+        "video": null,
+        "externalVimeoVideoId": "772077097",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/pilates-express",
+        "dimensionIds": [
+          "47fd6cf8-00fa-48d4-a454-1961986fafcc"
+        ],
+        "whatToBringIds": [
+          "c73f90fe-8a58-4920-a354-2e89510fc90a",
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 71610,
+        "name": "reformer align",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<span style=\"background-color:initial;font-family:inherit;font-size:inherit;text-align:inherit;text-transform:inherit;white-space:inherit;word-spacing:normal;caret-color:auto;\">Expand and build on the skills you've learned in Reformer Foundations. Using functional moves and classic Reformer Pilates, you'll leave our class feeling more connected to your body and stable on your own two feet. Don't forget your grip socks.</span><div><br /></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/class-images/reformer-pilates/reformer-pilates_class.tmb-wide-dt.jpg?sfvrsn=7bc8593b_2",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/reformer-align",
+        "dimensionIds": [
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72",
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "414e4c42-d749-4e8f-8ac5-d6e70e11c142",
+          "d85b3345-6311-4821-8637-7daa557aeeae",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 71206,
+        "name": "reformer athletic",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<span style=\"background-color:initial;font-family:inherit;font-size:inherit;text-align:inherit;text-transform:inherit;white-space:inherit;word-spacing:normal;caret-color:auto;\">Are you looking to take your training to the next level? If you are a regular class-goer and know how to use the equipment, you'll gain new skills and get the workout your body needs. Don't forget your grip socks.</span>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/reformer-pilates.tmb-wide-dt.jpg?sfvrsn=44954fc9_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/reformer-athletic",
+        "dimensionIds": [
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72",
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "414e4c42-d749-4e8f-8ac5-d6e70e11c142",
+          "d85b3345-6311-4821-8637-7daa557aeeae",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 47427,
+        "name": "reformer foundations",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<p><strong></strong>Enjoy a full-body workout as you learn Reformer Pilates techniques. </p><p dir=\"ltr\"></p><div><br /></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/acquisition-images/reformerpilates_oneseries.tmb-wide-dt.jpg?sfvrsn=6d02984f_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/reformer-foundations",
+        "dimensionIds": [
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72",
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "414e4c42-d749-4e8f-8ac5-d6e70e11c142",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a",
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 70601,
+        "name": "reformer recovery",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div><span style=\"background-color:initial;font-family:inherit;font-size:inherit;text-align:inherit;text-transform:inherit;white-space:inherit;word-spacing:normal;caret-color:auto;\">In our signature Reformer Recovery class, you will be guided through a variety of stretches that soften and lengthen tissues and fibres in all the right places.&nbsp;</span></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/general-class-images/reformer_mobility_workshop.tmb-wide-dt.jpg?sfvrsn=197bf59c_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/reformer-recovery",
+        "dimensionIds": [
+          "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72",
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "414e4c42-d749-4e8f-8ac5-d6e70e11c142",
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 70007,
+        "name": "sound bath",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div><span style=\"background-color:initial;font-family:inherit;font-size:inherit;text-align:inherit;text-transform:inherit;white-space:inherit;word-spacing:normal;caret-color:auto;\">Take a journey into sound healing with Sound Bath. Set to the soothing sounds of crystal singing bowls, this practice offers you space to nap without guilt. Starting with an opening pose and the remainder of the class in absolute rest, this is the ultimate occasion to recover, rebalance and reset.</span></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/club-imagery/wimbledon/wimbledon-oct-23/virgin-active_wimbledon_gex_soundbath2.tmb-wide-dt.jpg?sfvrsn=7d67b452_1",
+        "video": null,
+        "externalVimeoVideoId": "901465479",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/sound-bath",
+        "dimensionIds": [
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "eb456dcd-335f-47c3-bd60-d7abf1e4bda4"
+        ],
+        "whatToBringIds": []
+      },
+      {
+        "id": 33801,
+        "name": "strength and conditioning",
+        "type": "High Intensity Training",
+        "typeId": 605,
+        "description": "<p>Mix high-intensity training and functional movement in Strength and Conditioning. Expect a blend of dumbbells, kettlebells and Echo bikes for a workout that&rsquo;s always switching things up.</p>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/grid_training_2.tmb-wide-dt.jpg?sfvrsn=ddc1bec2_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/strength-and-conditioning",
+        "dimensionIds": [
+          "62580f41-c897-4ddf-a694-1554a4202785"
+        ],
+        "whatToBringIds": []
+      },
+      {
+        "id": 1806,
+        "name": "swim club",
+        "type": "Cardio Fitness",
+        "typeId": 601,
+        "description": "<p>If you're a keen swimmer looking to join a group of like-minded people for a casual swim or to improve your pacing, join our Swim Club. With the help of our official Virgin Active coaches, you'll join a community of swimmers in the pool.</p>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/class-images/swimming-generic/2018_swim_generic_1.tmb-wide-dt.jpg?sfvrsn=35c8e9ca_2",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/swim-club",
+        "dimensionIds": [
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "562492d6-a829-48d4-b5fc-dcdf8e8f58ae",
+          "7cbabeca-9d0b-4ace-a749-d59a7d0d2cc4"
+        ],
+        "whatToBringIds": [
+          "9377870e-b0d7-4ccf-bb3b-b92953066f36",
+          "c73f90fe-8a58-4920-a354-2e89510fc90a"
+        ]
+      },
+      {
+        "id": 42401,
+        "name": "yoga align",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div>Test your endurance and build confidence as you move into alignment.</div><div></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/acquisition-images/yoga-class-virgin-active.tmb-wide-dt.jpg?sfvrsn=b150128_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/yoga-align",
+        "dimensionIds": [
+          "c370d27e-ad10-4678-a969-e797f3c0a637",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      },
+      {
+        "id": 42201,
+        "name": "yoga calm",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div>In this slow-paced class, you will release tension, target deep connective tissues, like ligaments and tendons to increase circulation in your joints, which will improve your flexibility.</div><div></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/calm_virgin_active_classes.tmb-wide-dt.jpg?sfvrsn=64ca4e48_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/yoga-calm",
+        "dimensionIds": [
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "c370d27e-ad10-4678-a969-e797f3c0a637",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": []
+      },
+      {
+        "id": 42402,
+        "name": "yoga flow",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "<div>Raise your vibration in Flow, a high-energy, fast-paced class. Through dynamic poses, you'll build mobility and enhance your muscle development.</div><div></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/general-images/acquisition-images/flow_yoga_virginactive.tmb-wide-dt.jpg?sfvrsn=11c7c483_1",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/yoga-flow",
+        "dimensionIds": [
+          "65962093-ce41-4e5b-9051-dfc16f091e4f",
+          "c370d27e-ad10-4678-a969-e797f3c0a637",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": []
+      },
+      {
+        "id": 52611,
+        "name": "yoga foundations",
+        "type": "Yoga/ Pilates",
+        "typeId": 609,
+        "description": "Whether you&rsquo;re new to yoga or it&rsquo;s been a while since you rolled out your mat, our Yoga foundations class is ideal for those who want to take things at a gentle pace.  <div><br /></div>",
+        "image": "https://va-cdn.equator-live.com/images/images/default-source/class-images/br5a0434rt.tmb-wide-dt.jpg?sfvrsn=53046996_2",
+        "video": null,
+        "externalVimeoVideoId": "",
+        "url": "https://www.virginactive.co.uk/our-classes/class-details/yoga-foundations",
+        "dimensionIds": [
+          "c370d27e-ad10-4678-a969-e797f3c0a637",
+          "d585144f-01ca-408b-abef-5e32ee3728b3"
+        ],
+        "whatToBringIds": [
+          "d85b3345-6311-4821-8637-7daa557aeeae"
+        ]
+      }
+    ],
+    "classTimes": [
+      {
+        "id": 217431,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 13,
+        "capacity": 15,
+        "booked": 14,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T09:15:00Z",
+        "endTime": "2025-04-21T10:00:00Z"
+      },
+      {
+        "id": 216065,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 13,
+        "capacity": 15,
+        "booked": 11,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T11:15:00Z",
+        "endTime": "2025-04-21T12:00:00Z"
+      },
+      {
+        "id": 218131,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 13,
+        "startTime": "2025-04-22T08:15:00Z",
+        "endTime": "2025-04-22T09:00:00Z"
+      },
+      {
+        "id": 217921,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 16,
+        "startTime": "2025-04-22T09:15:00Z",
+        "endTime": "2025-04-22T10:00:00Z"
+      },
+      {
+        "id": 217571,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 16,
+        "startTime": "2025-04-22T12:15:00Z",
+        "endTime": "2025-04-22T13:00:00Z"
+      },
+      {
+        "id": 217606,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 9,
+        "startTime": "2025-04-22T13:15:00Z",
+        "endTime": "2025-04-22T14:00:00Z"
+      },
+      {
+        "id": 227790,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 1,
+        "startTime": "2025-04-22T16:15:00Z",
+        "endTime": "2025-04-22T17:00:00Z"
+      },
+      {
+        "id": 218888,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 8,
+        "startTime": "2025-04-22T17:15:00Z",
+        "endTime": "2025-04-22T18:00:00Z"
+      },
+      {
+        "id": 218713,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 22,
+        "startTime": "2025-04-22T18:15:00Z",
+        "endTime": "2025-04-22T19:00:00Z"
+      },
+      {
+        "id": 218433,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 18,
+        "startTime": "2025-04-23T07:15:00Z",
+        "endTime": "2025-04-23T08:00:00Z"
+      },
+      {
+        "id": 218573,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 13,
+        "startTime": "2025-04-23T08:15:00Z",
+        "endTime": "2025-04-23T09:00:00Z"
+      },
+      {
+        "id": 216328,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 17,
+        "startTime": "2025-04-23T10:15:00Z",
+        "endTime": "2025-04-23T11:00:00Z"
+      },
+      {
+        "id": 216975,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 15,
+        "startTime": "2025-04-23T12:15:00Z",
+        "endTime": "2025-04-23T13:00:00Z"
+      },
+      {
+        "id": 219114,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 11,
+        "startTime": "2025-04-23T17:15:00Z",
+        "endTime": "2025-04-23T18:00:00Z"
+      },
+      {
+        "id": 219253,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 24,
+        "startTime": "2025-04-23T18:15:00Z",
+        "endTime": "2025-04-23T19:00:00Z"
+      },
+      {
+        "id": 219531,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 9,
+        "startTime": "2025-04-24T07:15:00Z",
+        "endTime": "2025-04-24T08:00:00Z"
+      },
+      {
+        "id": 219149,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 9,
+        "startTime": "2025-04-24T09:15:00Z",
+        "endTime": "2025-04-24T10:00:00Z"
+      },
+      {
+        "id": 220302,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 13,
+        "startTime": "2025-04-24T10:15:00Z",
+        "endTime": "2025-04-24T11:00:00Z"
+      },
+      {
+        "id": 219894,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 5,
+        "startTime": "2025-04-24T12:15:00Z",
+        "endTime": "2025-04-24T13:00:00Z"
+      },
+      {
+        "id": 220234,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 14,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T13:15:00Z",
+        "endTime": "2025-04-24T14:00:00Z"
+      },
+      {
+        "id": 220132,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 5,
+        "startTime": "2025-04-24T17:15:00Z",
+        "endTime": "2025-04-24T18:00:00Z"
+      },
+      {
+        "id": 220098,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 12,
+        "startTime": "2025-04-25T07:00:00Z",
+        "endTime": "2025-04-25T07:45:00Z"
+      },
+      {
+        "id": 220268,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 17,
+        "startTime": "2025-04-25T08:15:00Z",
+        "endTime": "2025-04-25T09:00:00Z"
+      },
+      {
+        "id": 220914,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 4,
+        "startTime": "2025-04-25T10:15:00Z",
+        "endTime": "2025-04-25T11:00:00Z"
+      },
+      {
+        "id": 220574,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 3,
+        "startTime": "2025-04-25T11:15:00Z",
+        "endTime": "2025-04-25T12:00:00Z"
+      },
+      {
+        "id": 221016,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 8,
+        "startTime": "2025-04-25T12:15:00Z",
+        "endTime": "2025-04-25T13:00:00Z"
+      },
+      {
+        "id": 221084,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 12,
+        "capacity": 15,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T16:15:00Z",
+        "endTime": "2025-04-25T17:00:00Z"
+      },
+      {
+        "id": 220438,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 12,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 8,
+        "startTime": "2025-04-25T17:15:00Z",
+        "endTime": "2025-04-25T18:00:00Z"
+      },
+      {
+        "id": 220744,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 12,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 16,
+        "startTime": "2025-04-25T18:15:00Z",
+        "endTime": "2025-04-25T19:00:00Z"
+      },
+      {
+        "id": 228485,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Full",
+        "instructorId": 10,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 25,
+        "startTime": "2025-04-26T10:30:00Z",
+        "endTime": "2025-04-26T11:15:00Z"
+      },
+      {
+        "id": 216569,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 10,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 22,
+        "startTime": "2025-04-26T11:30:00Z",
+        "endTime": "2025-04-26T12:15:00Z"
+      },
+      {
+        "id": 228115,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 21,
+        "startTime": "2025-04-27T10:15:00Z",
+        "endTime": "2025-04-27T11:00:00Z"
+      },
+      {
+        "id": 227725,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 19,
+        "startTime": "2025-04-27T11:15:00Z",
+        "endTime": "2025-04-27T12:00:00Z"
+      },
+      {
+        "id": 216941,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 8,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 20,
+        "waitlistCount": 2,
+        "startTime": "2025-04-28T07:15:00Z",
+        "endTime": "2025-04-28T08:00:00Z"
+      },
+      {
+        "id": 216101,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 8,
+        "capacity": 15,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T08:15:00Z",
+        "endTime": "2025-04-28T09:00:00Z"
+      },
+      {
+        "id": 217432,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T09:15:00Z",
+        "endTime": "2025-04-28T10:00:00Z"
+      },
+      {
+        "id": 216066,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 11,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T11:15:00Z",
+        "endTime": "2025-04-28T12:00:00Z"
+      },
+      {
+        "id": 217222,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 8,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T16:15:00Z",
+        "endTime": "2025-04-28T17:00:00Z"
+      },
+      {
+        "id": 219773,
+        "classId": 71610,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T19:15:00Z",
+        "endTime": "2025-04-28T20:00:00Z"
+      },
+      {
+        "id": 217114,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 16,
+        "booked": 14,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T09:30:00Z",
+        "endTime": "2025-04-21T10:15:00Z"
+      },
+      {
+        "id": 218026,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 7,
+        "startTime": "2025-04-22T07:00:00Z",
+        "endTime": "2025-04-22T07:45:00Z"
+      },
+      {
+        "id": 218201,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 3,
+        "startTime": "2025-04-22T10:30:00Z",
+        "endTime": "2025-04-22T11:15:00Z"
+      },
+      {
+        "id": 216293,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 6,
+        "startTime": "2025-04-22T18:00:00Z",
+        "endTime": "2025-04-22T18:45:00Z"
+      },
+      {
+        "id": 218783,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 1,
+        "startTime": "2025-04-23T09:30:00Z",
+        "endTime": "2025-04-23T10:15:00Z"
+      },
+      {
+        "id": 219288,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 6,
+        "capacity": 16,
+        "booked": 8,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T13:15:00Z",
+        "endTime": "2025-04-23T14:00:00Z"
+      },
+      {
+        "id": 219010,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 1,
+        "startTime": "2025-04-23T17:45:00Z",
+        "endTime": "2025-04-23T18:30:00Z"
+      },
+      {
+        "id": 219218,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 6,
+        "startTime": "2025-04-23T18:45:00Z",
+        "endTime": "2025-04-23T19:30:00Z"
+      },
+      {
+        "id": 219462,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 7,
+        "startTime": "2025-04-24T07:00:00Z",
+        "endTime": "2025-04-24T07:45:00Z"
+      },
+      {
+        "id": 220370,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 16,
+        "booked": 15,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T10:30:00Z",
+        "endTime": "2025-04-24T11:15:00Z"
+      },
+      {
+        "id": 220404,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 26,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T18:00:00Z",
+        "endTime": "2025-04-24T18:45:00Z"
+      },
+      {
+        "id": 227998,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 16,
+        "waitlistCount": 7,
+        "startTime": "2025-04-25T09:30:00Z",
+        "endTime": "2025-04-25T10:15:00Z"
+      },
+      {
+        "id": 220608,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 1,
+        "startTime": "2025-04-25T17:30:00Z",
+        "endTime": "2025-04-25T18:15:00Z"
+      },
+      {
+        "id": 219704,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 7,
+        "startTime": "2025-04-26T09:30:00Z",
+        "endTime": "2025-04-26T10:15:00Z"
+      },
+      {
+        "id": 216811,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 9,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T10:30:00Z",
+        "endTime": "2025-04-26T11:15:00Z"
+      },
+      {
+        "id": 216500,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 16,
+        "booked": 1,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T11:30:00Z",
+        "endTime": "2025-04-26T12:15:00Z"
+      },
+      {
+        "id": 216742,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 16,
+        "booked": 15,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T08:30:00Z",
+        "endTime": "2025-04-27T09:15:00Z"
+      },
+      {
+        "id": 228448,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 16,
+        "booked": 16,
+        "waitlistCapacity": 40,
+        "waitlistCount": 2,
+        "startTime": "2025-04-27T10:30:00Z",
+        "endTime": "2025-04-27T11:15:00Z"
+      },
+      {
+        "id": 217115,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 16,
+        "booked": 4,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T09:30:00Z",
+        "endTime": "2025-04-28T10:15:00Z"
+      },
+      {
+        "id": 216171,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 16,
+        "booked": 0,
+        "waitlistCapacity": 40,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T17:45:00Z",
+        "endTime": "2025-04-28T18:30:00Z"
+      },
+      {
+        "id": 223642,
+        "classId": 33801,
+        "room": "Grid Training",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 16,
+        "booked": 0,
+        "waitlistCapacity": 16,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T18:45:00Z",
+        "endTime": "2025-04-28T19:30:00Z"
+      },
+      {
+        "id": 215021,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 18,
+        "booked": 16,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T09:45:00Z",
+        "endTime": "2025-04-21T10:30:00Z"
+      },
+      {
+        "id": 217956,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 20,
+        "booked": 16,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T09:45:00Z",
+        "endTime": "2025-04-22T10:30:00Z"
+      },
+      {
+        "id": 217781,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 16,
+        "capacity": 18,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T14:00:00Z",
+        "endTime": "2025-04-22T14:45:00Z"
+      },
+      {
+        "id": 215061,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 27,
+        "capacity": 18,
+        "booked": 14,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T09:45:00Z",
+        "endTime": "2025-04-23T10:30:00Z"
+      },
+      {
+        "id": 219428,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 20,
+        "booked": 20,
+        "waitlistCapacity": 50,
+        "waitlistCount": 6,
+        "startTime": "2025-04-24T09:45:00Z",
+        "endTime": "2025-04-24T10:30:00Z"
+      },
+      {
+        "id": 220982,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Waitlist",
+        "instructorId": 9,
+        "capacity": 20,
+        "booked": 20,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T09:45:00Z",
+        "endTime": "2025-04-25T10:30:00Z"
+      },
+      {
+        "id": 221312,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 20,
+        "booked": 17,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T09:00:00Z",
+        "endTime": "2025-04-26T09:45:00Z"
+      },
+      {
+        "id": 216431,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 23,
+        "capacity": 20,
+        "booked": 7,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T09:00:00Z",
+        "endTime": "2025-04-27T09:45:00Z"
+      },
+      {
+        "id": 221208,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 17,
+        "capacity": 20,
+        "booked": 6,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T16:15:00Z",
+        "endTime": "2025-04-27T17:00:00Z"
+      },
+      {
+        "id": 215022,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 9,
+        "capacity": 18,
+        "booked": 4,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T09:45:00Z",
+        "endTime": "2025-04-28T10:30:00Z"
+      },
+      {
+        "id": 223296,
+        "classId": 23,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 6,
+        "capacity": 18,
+        "booked": 0,
+        "waitlistCapacity": 18,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T14:00:00Z",
+        "endTime": "2025-04-28T14:45:00Z"
+      },
+      {
+        "id": 217326,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 5,
+        "capacity": 15,
+        "booked": 14,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T09:45:00Z",
+        "endTime": "2025-04-21T10:45:00Z"
+      },
+      {
+        "id": 218538,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 5,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T06:45:00Z",
+        "endTime": "2025-04-23T07:30:00Z"
+      },
+      {
+        "id": 216363,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 1,
+        "startTime": "2025-04-23T10:45:00Z",
+        "endTime": "2025-04-23T11:45:00Z"
+      },
+      {
+        "id": 219323,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 5,
+        "capacity": 15,
+        "booked": 11,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T17:45:00Z",
+        "endTime": "2025-04-23T18:30:00Z"
+      },
+      {
+        "id": 219928,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 8,
+        "startTime": "2025-04-24T18:45:00Z",
+        "endTime": "2025-04-24T19:45:00Z"
+      },
+      {
+        "id": 220778,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 12,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T09:45:00Z",
+        "endTime": "2025-04-25T10:45:00Z"
+      },
+      {
+        "id": 216672,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 1,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 6,
+        "startTime": "2025-04-26T10:30:00Z",
+        "endTime": "2025-04-26T11:30:00Z"
+      },
+      {
+        "id": 216915,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 15,
+        "capacity": 15,
+        "booked": 5,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T08:45:00Z",
+        "endTime": "2025-04-27T09:30:00Z"
+      },
+      {
+        "id": 216535,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 15,
+        "capacity": 15,
+        "booked": 4,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T11:45:00Z",
+        "endTime": "2025-04-27T12:45:00Z"
+      },
+      {
+        "id": 217327,
+        "classId": 42401,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 4,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T09:45:00Z",
+        "endTime": "2025-04-28T10:45:00Z"
+      },
+      {
+        "id": 217256,
+        "classId": 47427,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 13,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 24,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T10:15:00Z",
+        "endTime": "2025-04-21T11:00:00Z"
+      },
+      {
+        "id": 219080,
+        "classId": 47427,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 12,
+        "waitlistCapacity": 24,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T08:15:00Z",
+        "endTime": "2025-04-24T09:00:00Z"
+      },
+      {
+        "id": 216638,
+        "classId": 47427,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 10,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 24,
+        "waitlistCount": 3,
+        "startTime": "2025-04-26T12:30:00Z",
+        "endTime": "2025-04-26T13:15:00Z"
+      },
+      {
+        "id": 228102,
+        "classId": 47427,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 15,
+        "booked": 11,
+        "waitlistCapacity": 24,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T09:15:00Z",
+        "endTime": "2025-04-27T10:00:00Z"
+      },
+      {
+        "id": 217257,
+        "classId": 47427,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 3,
+        "waitlistCapacity": 24,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T10:15:00Z",
+        "endTime": "2025-04-28T11:00:00Z"
+      },
+      {
+        "id": 222245,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 12,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T10:30:00Z",
+        "endTime": "2025-04-21T11:15:00Z"
+      },
+      {
+        "id": 222071,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 8,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T09:30:00Z",
+        "endTime": "2025-04-22T10:15:00Z"
+      },
+      {
+        "id": 222906,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Waitlist",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T17:45:00Z",
+        "endTime": "2025-04-22T18:30:00Z"
+      },
+      {
+        "id": 222406,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 3,
+        "startTime": "2025-04-22T18:45:00Z",
+        "endTime": "2025-04-22T19:30:00Z"
+      },
+      {
+        "id": 222210,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 3,
+        "startTime": "2025-04-23T07:00:00Z",
+        "endTime": "2025-04-23T07:45:00Z"
+      },
+      {
+        "id": 222280,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 5,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T10:30:00Z",
+        "endTime": "2025-04-23T11:15:00Z"
+      },
+      {
+        "id": 222608,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T18:00:00Z",
+        "endTime": "2025-04-23T18:45:00Z"
+      },
+      {
+        "id": 225607,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 6,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T09:30:00Z",
+        "endTime": "2025-04-24T10:15:00Z"
+      },
+      {
+        "id": 227986,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 3,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T12:30:00Z",
+        "endTime": "2025-04-24T13:15:00Z"
+      },
+      {
+        "id": 225624,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T17:45:00Z",
+        "endTime": "2025-04-24T18:30:00Z"
+      },
+      {
+        "id": 222643,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 8,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T18:45:00Z",
+        "endTime": "2025-04-24T19:30:00Z"
+      },
+      {
+        "id": 221938,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Waitlist",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 4,
+        "startTime": "2025-04-25T07:00:00Z",
+        "endTime": "2025-04-25T07:45:00Z"
+      },
+      {
+        "id": 222106,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 6,
+        "capacity": 12,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T10:30:00Z",
+        "endTime": "2025-04-25T11:15:00Z"
+      },
+      {
+        "id": 222350,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 12,
+        "booked": 7,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T18:30:00Z",
+        "endTime": "2025-04-25T19:15:00Z"
+      },
+      {
+        "id": 222140,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 5,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T08:30:00Z",
+        "endTime": "2025-04-26T09:15:00Z"
+      },
+      {
+        "id": 225400,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T10:30:00Z",
+        "endTime": "2025-04-26T11:15:00Z"
+      },
+      {
+        "id": 222174,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T09:30:00Z",
+        "endTime": "2025-04-27T10:15:00Z"
+      },
+      {
+        "id": 221972,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 12,
+        "booked": 7,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T11:30:00Z",
+        "endTime": "2025-04-27T12:15:00Z"
+      },
+      {
+        "id": 221776,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 3,
+        "capacity": 10,
+        "booked": 3,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T07:00:00Z",
+        "endTime": "2025-04-28T07:45:00Z"
+      },
+      {
+        "id": 222246,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 12,
+        "booked": 1,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T10:30:00Z",
+        "endTime": "2025-04-28T11:15:00Z"
+      },
+      {
+        "id": 222316,
+        "classId": 77813,
+        "room": "Lift Club Floor",
+        "status": "Available",
+        "instructorId": 21,
+        "capacity": 12,
+        "booked": 0,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T18:00:00Z",
+        "endTime": "2025-04-28T18:45:00Z"
+      },
+      {
+        "id": 216135,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T11:30:00Z",
+        "endTime": "2025-04-21T12:15:00Z"
+      },
+      {
+        "id": 217711,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 9,
+        "startTime": "2025-04-22T11:30:00Z",
+        "endTime": "2025-04-22T12:15:00Z"
+      },
+      {
+        "id": 216258,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 10,
+        "startTime": "2025-04-23T11:30:00Z",
+        "endTime": "2025-04-23T12:15:00Z"
+      },
+      {
+        "id": 214904,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 10,
+        "waitlistCount": 5,
+        "startTime": "2025-04-24T11:30:00Z",
+        "endTime": "2025-04-24T12:15:00Z"
+      },
+      {
+        "id": 220846,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 6,
+        "startTime": "2025-04-25T11:30:00Z",
+        "endTime": "2025-04-25T12:15:00Z"
+      },
+      {
+        "id": 216136,
+        "classId": 68202,
+        "room": "Grid Training",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 10,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T11:30:00Z",
+        "endTime": "2025-04-28T12:15:00Z"
+      },
+      {
+        "id": 217149,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 13,
+        "capacity": 15,
+        "booked": 12,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T12:15:00Z",
+        "endTime": "2025-04-21T13:00:00Z"
+      },
+      {
+        "id": 217886,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 6,
+        "startTime": "2025-04-22T07:15:00Z",
+        "endTime": "2025-04-22T08:00:00Z"
+      },
+      {
+        "id": 218236,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 14,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T11:15:00Z",
+        "endTime": "2025-04-22T12:00:00Z"
+      },
+      {
+        "id": 219669,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 14,
+        "startTime": "2025-04-22T19:15:00Z",
+        "endTime": "2025-04-22T20:00:00Z"
+      },
+      {
+        "id": 218923,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T09:15:00Z",
+        "endTime": "2025-04-23T10:00:00Z"
+      },
+      {
+        "id": 216398,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 1,
+        "startTime": "2025-04-23T11:15:00Z",
+        "endTime": "2025-04-23T12:00:00Z"
+      },
+      {
+        "id": 219183,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 6,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 13,
+        "startTime": "2025-04-23T19:15:00Z",
+        "endTime": "2025-04-23T20:00:00Z"
+      },
+      {
+        "id": 220030,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 7,
+        "startTime": "2025-04-24T18:15:00Z",
+        "endTime": "2025-04-24T19:00:00Z"
+      },
+      {
+        "id": 220336,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 13,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T09:15:00Z",
+        "endTime": "2025-04-25T10:00:00Z"
+      },
+      {
+        "id": 220540,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 10,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 11,
+        "startTime": "2025-04-26T08:30:00Z",
+        "endTime": "2025-04-26T09:15:00Z"
+      },
+      {
+        "id": 217150,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 3,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T12:15:00Z",
+        "endTime": "2025-04-28T13:00:00Z"
+      },
+      {
+        "id": 217362,
+        "classId": 71206,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T17:15:00Z",
+        "endTime": "2025-04-28T18:00:00Z"
+      },
+      {
+        "id": 217501,
+        "classId": 70007,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-21T13:00:00Z",
+        "endTime": "2025-04-21T13:45:00Z"
+      },
+      {
+        "id": 219600,
+        "classId": 70007,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 5,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 20,
+        "waitlistCount": 1,
+        "startTime": "2025-04-23T18:45:00Z",
+        "endTime": "2025-04-23T19:45:00Z"
+      },
+      {
+        "id": 230417,
+        "classId": 70007,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 1,
+        "capacity": 15,
+        "booked": 11,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T13:00:00Z",
+        "endTime": "2025-04-26T13:45:00Z"
+      },
+      {
+        "id": 217502,
+        "classId": 70007,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 2,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T13:00:00Z",
+        "endTime": "2025-04-28T13:45:00Z"
+      },
+      {
+        "id": 218097,
+        "classId": 70007,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 24,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T20:15:00Z",
+        "endTime": "2025-04-28T21:15:00Z"
+      },
+      {
+        "id": 221672,
+        "classId": 78003,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 15,
+        "booked": 14,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T09:45:00Z",
+        "endTime": "2025-04-22T10:15:00Z"
+      },
+      {
+        "id": 223038,
+        "classId": 78003,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T09:45:00Z",
+        "endTime": "2025-04-23T10:15:00Z"
+      },
+      {
+        "id": 221741,
+        "classId": 78003,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 20,
+        "waitlistCount": 5,
+        "startTime": "2025-04-25T12:00:00Z",
+        "endTime": "2025-04-25T12:30:00Z"
+      },
+      {
+        "id": 217746,
+        "classId": 70601,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 13,
+        "startTime": "2025-04-22T10:15:00Z",
+        "endTime": "2025-04-22T11:00:00Z"
+      },
+      {
+        "id": 219826,
+        "classId": 70601,
+        "room": "Studio One",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 10,
+        "startTime": "2025-04-24T11:15:00Z",
+        "endTime": "2025-04-24T12:00:00Z"
+      },
+      {
+        "id": 219962,
+        "classId": 70601,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 20,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 7,
+        "startTime": "2025-04-24T19:15:00Z",
+        "endTime": "2025-04-24T20:00:00Z"
+      },
+      {
+        "id": 220880,
+        "classId": 70601,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 12,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 7,
+        "startTime": "2025-04-25T19:15:00Z",
+        "endTime": "2025-04-25T20:00:00Z"
+      },
+      {
+        "id": 227911,
+        "classId": 70601,
+        "room": "Reformer Pilates Studio",
+        "status": "Waitlist",
+        "instructorId": 11,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 25,
+        "waitlistCount": 7,
+        "startTime": "2025-04-27T12:15:00Z",
+        "endTime": "2025-04-27T13:00:00Z"
+      },
+      {
+        "id": 221381,
+        "classId": 70601,
+        "room": "Reformer Pilates Studio",
+        "status": "Available",
+        "instructorId": 22,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 25,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T18:15:00Z",
+        "endTime": "2025-04-28T19:00:00Z"
+      },
+      {
+        "id": 218166,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 2,
+        "startTime": "2025-04-22T10:45:00Z",
+        "endTime": "2025-04-22T11:45:00Z"
+      },
+      {
+        "id": 219996,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-24T09:45:00Z",
+        "endTime": "2025-04-24T10:45:00Z"
+      },
+      {
+        "id": 220710,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T11:00:00Z",
+        "endTime": "2025-04-25T11:45:00Z"
+      },
+      {
+        "id": 220948,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 1,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T08:30:00Z",
+        "endTime": "2025-04-26T09:15:00Z"
+      },
+      {
+        "id": 216880,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 15,
+        "capacity": 15,
+        "booked": 8,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T09:45:00Z",
+        "endTime": "2025-04-27T10:30:00Z"
+      },
+      {
+        "id": 217080,
+        "classId": 42402,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 24,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T17:45:00Z",
+        "endTime": "2025-04-28T18:30:00Z"
+      },
+      {
+        "id": 225422,
+        "classId": 78002,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T12:00:00Z",
+        "endTime": "2025-04-22T12:45:00Z"
+      },
+      {
+        "id": 223076,
+        "classId": 78002,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 4,
+        "startTime": "2025-04-22T18:45:00Z",
+        "endTime": "2025-04-22T19:30:00Z"
+      },
+      {
+        "id": 218643,
+        "classId": 52611,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 30,
+        "waitlistCount": 5,
+        "startTime": "2025-04-22T17:45:00Z",
+        "endTime": "2025-04-22T18:30:00Z"
+      },
+      {
+        "id": 228181,
+        "classId": 47033,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 4,
+        "capacity": 27,
+        "booked": 23,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-22T18:15:00Z",
+        "endTime": "2025-04-22T19:00:00Z"
+      },
+      {
+        "id": 218678,
+        "classId": 47033,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 27,
+        "booked": 13,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T09:30:00Z",
+        "endTime": "2025-04-23T10:15:00Z"
+      },
+      {
+        "id": 220812,
+        "classId": 47033,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 7,
+        "capacity": 27,
+        "booked": 17,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T09:30:00Z",
+        "endTime": "2025-04-25T10:15:00Z"
+      },
+      {
+        "id": 215856,
+        "classId": 47033,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 15,
+        "capacity": 27,
+        "booked": 9,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-27T10:45:00Z",
+        "endTime": "2025-04-27T11:30:00Z"
+      },
+      {
+        "id": 217397,
+        "classId": 47033,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 11,
+        "capacity": 27,
+        "booked": 2,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T09:30:00Z",
+        "endTime": "2025-04-28T10:15:00Z"
+      },
+      {
+        "id": 219358,
+        "classId": 47032,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 4,
+        "capacity": 27,
+        "booked": 18,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T18:15:00Z",
+        "endTime": "2025-04-23T19:00:00Z"
+      },
+      {
+        "id": 221346,
+        "classId": 47032,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 7,
+        "capacity": 27,
+        "booked": 20,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T09:00:00Z",
+        "endTime": "2025-04-26T09:45:00Z"
+      },
+      {
+        "id": 217642,
+        "classId": 47032,
+        "room": "Cycle",
+        "status": "Available",
+        "instructorId": 2,
+        "capacity": 27,
+        "booked": 0,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T18:15:00Z",
+        "endTime": "2025-04-28T19:00:00Z"
+      },
+      {
+        "id": 223237,
+        "classId": 1806,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 25,
+        "capacity": 10,
+        "booked": 4,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-23T19:00:00Z",
+        "endTime": "2025-04-23T19:45:00Z"
+      },
+      {
+        "id": 222950,
+        "classId": 1806,
+        "room": "Indoor Pool",
+        "status": "Available",
+        "instructorId": 18,
+        "capacity": 12,
+        "booked": 0,
+        "waitlistCapacity": 20,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T07:30:00Z",
+        "endTime": "2025-04-28T08:15:00Z"
+      },
+      {
+        "id": 221870,
+        "classId": 78001,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 2,
+        "startTime": "2025-04-24T11:00:00Z",
+        "endTime": "2025-04-24T11:45:00Z"
+      },
+      {
+        "id": 223110,
+        "classId": 78001,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 2,
+        "startTime": "2025-04-24T17:45:00Z",
+        "endTime": "2025-04-24T18:30:00Z"
+      },
+      {
+        "id": 222037,
+        "classId": 78001,
+        "room": "Yoga",
+        "status": "Waitlist",
+        "instructorId": 10,
+        "capacity": 15,
+        "booked": 15,
+        "waitlistCapacity": 50,
+        "waitlistCount": 13,
+        "startTime": "2025-04-26T09:30:00Z",
+        "endTime": "2025-04-26T10:15:00Z"
+      },
+      {
+        "id": 221638,
+        "classId": 78001,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 14,
+        "capacity": 15,
+        "booked": 6,
+        "waitlistCapacity": 50,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T11:00:00Z",
+        "endTime": "2025-04-28T11:45:00Z"
+      },
+      {
+        "id": 220642,
+        "classId": 42201,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 19,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-25T17:45:00Z",
+        "endTime": "2025-04-25T18:45:00Z"
+      },
+      {
+        "id": 216845,
+        "classId": 42201,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 1,
+        "capacity": 15,
+        "booked": 10,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-26T11:45:00Z",
+        "endTime": "2025-04-26T12:45:00Z"
+      },
+      {
+        "id": 218062,
+        "classId": 42201,
+        "room": "Yoga",
+        "status": "Available",
+        "instructorId": 24,
+        "capacity": 15,
+        "booked": 0,
+        "waitlistCapacity": 30,
+        "waitlistCount": 0,
+        "startTime": "2025-04-28T18:45:00Z",
+        "endTime": "2025-04-28T19:45:00Z"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "562492d6-a829-48d4-b5fc-dcdf8e8f58ae",
+        "name": "Stamina"
+      },
+      {
+        "id": "c370d27e-ad10-4678-a969-e797f3c0a637",
+        "name": "Stability"
+      },
+      {
+        "id": "630dc1ea-4455-41ad-8cd1-fb0df216c221",
+        "name": "Cycle"
+      },
+      {
+        "id": "a4584d8d-63bc-45e9-b27c-c49adfe03783",
+        "name": "Strength"
+      },
+      {
+        "id": "0308d299-4192-4782-9391-688d7b1de11b",
+        "name": "Weight Training"
+      },
+      {
+        "id": "47fd6cf8-00fa-48d4-a454-1961986fafcc",
+        "name": "Matwork"
+      },
+      {
+        "id": "c4e15a3c-8f10-4c4d-9bf8-f5d2d2d57a72",
+        "name": "Functional movement"
+      },
+      {
+        "id": "65962093-ce41-4e5b-9051-dfc16f091e4f",
+        "name": "Wellbeing"
+      },
+      {
+        "id": "d585144f-01ca-408b-abef-5e32ee3728b3",
+        "name": "Balance"
+      },
+      {
+        "id": "eb456dcd-335f-47c3-bd60-d7abf1e4bda4",
+        "name": "Yoga"
+      },
+      {
+        "id": "62580f41-c897-4ddf-a694-1554a4202785",
+        "name": "Strength and Conditioning"
+      },
+      {
+        "id": "7cbabeca-9d0b-4ace-a749-d59a7d0d2cc4",
+        "name": "Breathing (Endurance)"
+      }
+    ],
+    "instructors": [
+      {
+        "id": 1,
+        "name": "Akvile Sujaviciute"
+      },
+      {
+        "id": 2,
+        "name": "Alessandro Rossi"
+      },
+      {
+        "id": 3,
+        "name": "Andrew Junor"
+      },
+      {
+        "id": 4,
+        "name": "Andrew Kinsler"
+      },
+      {
+        "id": 5,
+        "name": "Anya Starostina"
+      },
+      {
+        "id": 6,
+        "name": "Charlie Collins"
+      },
+      {
+        "id": 7,
+        "name": "David Almeida"
+      },
+      {
+        "id": 8,
+        "name": "Helen Cooke"
+      },
+      {
+        "id": 9,
+        "name": "Ines Luis"
+      },
+      {
+        "id": 10,
+        "name": "Jane Dance"
+      },
+      {
+        "id": 11,
+        "name": "Jennifer Norman"
+      },
+      {
+        "id": 12,
+        "name": "Justine Jarrold"
+      },
+      {
+        "id": 13,
+        "name": "Karis Lebon"
+      },
+      {
+        "id": 14,
+        "name": "Katie Rice"
+      },
+      {
+        "id": 15,
+        "name": "Lisa Marie Robinson"
+      },
+      {
+        "id": 16,
+        "name": "Lorraine Dean-Grundy"
+      },
+      {
+        "id": 17,
+        "name": "Maggie Ekang"
+      },
+      {
+        "id": 18,
+        "name": "Mari Baccan"
+      },
+      {
+        "id": 19,
+        "name": "Marjan Nourouzi"
+      },
+      {
+        "id": 20,
+        "name": "Marzia Troiano"
+      },
+      {
+        "id": 21,
+        "name": "Natalya Yiannakou"
+      },
+      {
+        "id": 22,
+        "name": "Nicholas Thornley-Chan"
+      },
+      {
+        "id": 23,
+        "name": "Nicola Woolman"
+      },
+      {
+        "id": 24,
+        "name": "Rhys Howells"
+      },
+      {
+        "id": 25,
+        "name": "Roland van Alimbuyuguen"
+      },
+      {
+        "id": 26,
+        "name": "Rupert Wilson"
+      },
+      {
+        "id": 27,
+        "name": "Yirga Hab"
+      }
+    ],
+    "whatToBring": [
+      {
+        "id": "d85b3345-6311-4821-8637-7daa557aeeae",
+        "name": "Water Bottle",
+        "icon": null
+      },
+      {
+        "id": "c73f90fe-8a58-4920-a354-2e89510fc90a",
+        "name": "Towel",
+        "icon": null
+      },
+      {
+        "id": "414e4c42-d749-4e8f-8ac5-d6e70e11c142",
+        "name": "Grip Socks",
+        "icon": null
+      },
+      {
+        "id": "9377870e-b0d7-4ccf-bb3b-b92953066f36",
+        "name": "Swimsuit",
+        "icon": null
+      }
+    ]
+  },
+  "success": true
+}

@@ -1,0 +1,82 @@
+const puppeteer = require('puppeteer');
+/**
+ * Logs in to Virgin Active using provided credentials and retrieves the user's booked classes.
+ * @param {string} username User’s Virgin Active email
+ * @param {string} password User’s Virgin Active password
+ * @returns {Promise<Object>}
+ */
+async function getBookedClasses(username, password) {
+  // Launch Chromium with headless mode and sandbox args
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    defaultViewport: null
+  });
+  const page = await browser.newPage();
+
+  // Navigate to the login page
+  await page.goto(
+    'https://www.virginactive.co.uk/login?sf_cntrl_id=ctl00%24Body%24C001&ReturnUrl=https%3A%2F%2Fwww.virginactive.co.uk',
+    { waitUntil: 'networkidle2' }
+  );
+
+  // Accept cookie banner if present
+  try {
+    await page.waitForSelector('button', { timeout: 5000 });
+    const accepted = await page.evaluate(() => {
+      const btns = Array.from(document.querySelectorAll('button'));
+      const acceptBtn = btns.find(b => b.textContent?.toLowerCase().includes('accept all cookies'));
+      if (acceptBtn) { acceptBtn.click(); return true; }
+      return false;
+    });
+    if (accepted) await page.waitForTimeout(1000);
+  } catch (e) {
+    console.log('No cookie banner to accept');
+  }
+
+  // Dismiss any notifications prompt
+  try {
+    const [noThanksBtn] = await page.$x(
+      "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'no thanks')]"
+    );
+    if (noThanksBtn) {
+      await noThanksBtn.click();
+      await page.waitForTimeout(1000);
+    }
+  } catch (e) {
+    // ignore if not present
+  }
+
+  // Fill in credentials
+  await page.type('#UserName', username, { delay: 50 });
+  await page.type('#Password', password, { delay: 50 });
+
+  // Submit and wait for navigation
+  await Promise.all([
+    page.click('button[type="submit"]'),
+    page.waitForNavigation({ waitUntil: 'networkidle2' })
+  ]);
+
+  // Fetch booked classes via the API, handling invalid JSON
+  const bookedClasses = await page.evaluate(async () => {
+    const response = await fetch('/api/class/getBookedClasses', {
+      credentials: 'include',
+      headers: {
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    });
+    const text = await response.text();
+    try {
+      return JSON.parse(text);
+    } catch (err) {
+      console.error('Invalid JSON from booked-classes API:', text);
+      return { error: 'Invalid JSON response', raw: text };
+    }
+  });
+
+  await browser.close();
+  return bookedClasses;
+}
+
+module.exports = { getBookedClasses };
