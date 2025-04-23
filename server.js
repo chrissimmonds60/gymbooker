@@ -42,6 +42,7 @@ app.post('/schedule-booking', (req, res) => {
 
 // endpoint to fetch booked classes
 app.post('/booked-classes', async (req, res) => {
+  console.log('🔔 Received /booked-classes request:', req.body);
   const { username, password } = req.body;
   if (!username || !password) {
     console.log('  → 400 missing credentials');
@@ -49,6 +50,7 @@ app.post('/booked-classes', async (req, res) => {
   }
   try {
     const result = await getBookedClasses(username, password);
+    console.log('📥 getBookedClasses returned:', JSON.stringify(result));
     res.json(result);
   } catch (err) {
     console.error('🔴 Error fetching booked classes:', err);
@@ -58,6 +60,7 @@ app.post('/booked-classes', async (req, res) => {
 
 // endpoint to book a class
 app.post('/book-class', async (req, res) => {
+  console.log('🔔 Received /book-class request:', req.body);
   const { username, password, clubId, classInstanceId } = req.body;
   if (!username || !password || !classInstanceId) {
     console.log('  → 400 missing fields');

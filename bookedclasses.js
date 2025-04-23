@@ -84,6 +84,7 @@ async function getBookedClasses(username, password) {
       }
     });
 
+    console.log('[getBookedClasses] Raw bookedClasses:', JSON.stringify(bookedClasses));
     await browser.close();
     console.log('[getBookedClasses] Browser closed');
     console.log('[getBookedClasses] Returning booked classes:', bookedClasses);
