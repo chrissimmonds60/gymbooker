@@ -8,18 +8,27 @@ async function bookClass(classSessionId, clubId, email, password) {
    defaultViewport: null
  });
  const page = await browser.newPage();
+ // Increase navigation timeout to 60 seconds
+ await page.setDefaultNavigationTimeout(60000);
   try {
-    await page.goto("https://www.virginactive.co.uk/");
+    console.log("[bookClass] Navigating to home page");
+    await page.goto("https://www.virginactive.co.uk/", { waitUntil: "networkidle2", timeout: 60000 });
+    console.log("[bookClass] Home page loaded");
+    console.log("[bookClass] Clicking login link");
     await page.click("a[href='/account/login']");
     await page.waitForSelector("#emailAddress");
-
+    console.log("[bookClass] Login page loaded");
+    console.log("[bookClass] Typing username");
     await page.type("#emailAddress", email);
+    console.log("[bookClass] Typing password");
     await page.type("#password", password);
+    console.log("[bookClass] Submitting login form");
     await Promise.all([
       page.click("button[type='submit']"),
-      page.waitForNavigation({ waitUntil: "networkidle0" })
+      page.waitForNavigation({ waitUntil: "networkidle0", timeout: 60000 })
     ]);
-
+    console.log("[bookClass] Login navigation complete");
+    console.log(`[bookClass] Performing booking for classSessionId=${classSessionId}, clubId=${clubId}`);
     const response = await page.evaluate(async ({ classSessionId, clubId }) => {
       const token = localStorage.getItem("access_token");
       if (!token) {
