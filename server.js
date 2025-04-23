@@ -65,7 +65,7 @@ app.post('/book-class', async (req, res) => {
   }
 
   try {
-    const { bookClass } = require('./bookclass');
+    const bookClass = require('./bookclass');
     const result = await bookClass(username, password, classInstanceId);
     res.json({ success: true, result });
   } catch (err) {
