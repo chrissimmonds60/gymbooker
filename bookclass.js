@@ -74,11 +74,5 @@ async function bookClass(classSessionId, clubId, email, password) {
   return result;
 }
 
-// Example usage:
-const sessionId = 216535; // Replace with the actual session-specific ID (not the shared classId)
-const clubId = 408;
-const email = "your@email.com"; // Replace with actual email passed from app
-const password = "yourPassword"; // Replace with actual password passed from app
-bookClass(sessionId, clubId, email, password);
 
 module.exports = bookClass;
