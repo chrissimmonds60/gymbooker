@@ -9,11 +9,12 @@ async function getBookedClasses(username, password) {
   try {
     console.log('[getBookedClasses] Starting booking fetch for user:', username);
     // Launch Chromium with headless mode and sandbox args
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      defaultViewport: null
-    });
+  const browser = await puppeteer.launch({
+  executablePath: '/usr/bin/chromium-browser',
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  defaultViewport: null
+});
     const page = await browser.newPage();
 
     // Navigate to the login page
