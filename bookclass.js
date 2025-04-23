@@ -1,7 +1,4 @@
-
-
 const puppeteer = require("puppeteer");
-const axios = require("axios");
 
 async function bookClass(classSessionId, clubId, email, password) {
   const browser = await puppeteer.launch({ headless: "new" });
