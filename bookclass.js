@@ -21,6 +21,9 @@ async function bookClass(classSessionId, clubId, email, password) {
     { waitUntil: 'networkidle2' }
   );
   console.log('[bookClass] Login page loaded');
+  if (!page.url().includes('/login')) {
+    throw new Error('Unexpected landing page: ' + page.url());
+  }
 
   // Accept cookie banner if present
   try {
