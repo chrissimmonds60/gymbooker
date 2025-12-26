@@ -3,16 +3,58 @@
 🔐 Navigating to login page...
 ✅ Login successful.
 📅 Navigating to timetable for wimbledon (wimbledon-worple-road)
-📦 Found 5 classes for wimbledon
+📦 Found 13 classes for wimbledon
 📅 Navigating to timetable for bank (bank)
-📦 Found 5 classes for bank
+📦 Found 8 classes for bank
 📅 Navigating to timetable for walbrook (walbrook)
-📦 Found 2 classes for walbrook
+📦 Found 5 classes for walbrook
 📅 Navigating to timetable for moorgate (moorgate)
-📦 Found 2 classes for moorgate
+📦 Found 6 classes for moorgate
 📅 Navigating to timetable for aldersgate (aldersgate)
-📦 Found 5 classes for aldersgate
+📦 Found 6 classes for aldersgate
 [
+  {
+    "club": "wimbledon",
+    "time": "08:15 - 09:00",
+    "title": "reformer align",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:15 - 10:00",
+    "title": "reformer athletic",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:30 - 10:15",
+    "title": "cycle tempo",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:30 - 10:15",
+    "title": "strength and conditioning",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:45 - 10:30",
+    "title": "aqua",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "09:45 - 10:45",
+    "title": "yoga align",
+    "clubId": "408",
+    "classId": "unknown"
+  },
   {
     "club": "wimbledon",
     "time": "10:15 - 11:00",
@@ -23,21 +65,21 @@
   {
     "club": "wimbledon",
     "time": "10:30 - 11:15",
-    "title": "strength and conditioning",
+    "title": "lift club",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
     "time": "11:00 - 11:45",
-    "title": "pilates align",
+    "title": "yoga flow",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
     "time": "11:15 - 12:00",
-    "title": "reformer recovery",
+    "title": "reformer align",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -49,6 +91,34 @@
     "classId": "unknown"
   },
   {
+    "club": "wimbledon",
+    "time": "12:00 - 12:30",
+    "title": "pilates express",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "wimbledon",
+    "time": "12:15 - 13:00",
+    "title": "reformer align",
+    "clubId": "408",
+    "classId": "unknown"
+  },
+  {
+    "club": "bank",
+    "time": "08:15 - 09:00",
+    "title": "reformer align",
+    "clubId": "29",
+    "classId": "unknown"
+  },
+  {
+    "club": "bank",
+    "time": "09:15 - 10:00",
+    "title": "reformer align",
+    "clubId": "29",
+    "classId": "unknown"
+  },
+  {
     "club": "bank",
     "time": "11:15 - 12:00",
     "title": "reformer align",
@@ -58,14 +128,7 @@
   {
     "club": "bank",
     "time": "12:15 - 13:00",
-    "title": "pilates align",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "12:15 - 13:00",
-    "title": "reformer athletic",
+    "title": "reformer align",
     "clubId": "29",
     "classId": "unknown"
   },
@@ -78,15 +141,43 @@
   },
   {
     "club": "bank",
+    "time": "13:00 - 13:45",
+    "title": "sound bath",
+    "clubId": "29",
+    "classId": "unknown"
+  },
+  {
+    "club": "bank",
     "time": "13:15 - 14:00",
-    "title": "reformer athletic",
+    "title": "reformer recovery",
+    "clubId": "29",
+    "classId": "unknown"
+  },
+  {
+    "club": "bank",
+    "time": "14:15 - 15:00",
+    "title": "reformer align",
     "clubId": "29",
     "classId": "unknown"
   },
   {
     "club": "walbrook",
+    "time": "07:00 - 07:45",
+    "title": "strength and conditioning",
+    "clubId": "953",
+    "classId": "unknown"
+  },
+  {
+    "club": "walbrook",
     "time": "12:15 - 13:00",
-    "title": "reformer align",
+    "title": "boxing bag work",
+    "clubId": "953",
+    "classId": "unknown"
+  },
+  {
+    "club": "walbrook",
+    "time": "12:15 - 13:00",
+    "title": "reformer foundations",
     "clubId": "953",
     "classId": "unknown"
   },
@@ -98,6 +189,27 @@
     "classId": "unknown"
   },
   {
+    "club": "walbrook",
+    "time": "13:15 - 14:00",
+    "title": "reformer align",
+    "clubId": "953",
+    "classId": "unknown"
+  },
+  {
+    "club": "moorgate",
+    "time": "10:15 - 11:00",
+    "title": "reformer athletic",
+    "clubId": "59",
+    "classId": "unknown"
+  },
+  {
+    "club": "moorgate",
+    "time": "11:15 - 12:00",
+    "title": "reformer align",
+    "clubId": "59",
+    "classId": "unknown"
+  },
+  {
     "club": "moorgate",
     "time": "12:15 - 13:00",
     "title": "lift club",
@@ -106,9 +218,44 @@
   },
   {
     "club": "moorgate",
-    "time": "17:45 - 18:30",
-    "title": "pilates align",
+    "time": "12:15 - 13:00",
+    "title": "reformer align",
     "clubId": "59",
+    "classId": "unknown"
+  },
+  {
+    "club": "moorgate",
+    "time": "12:15 - 13:00",
+    "title": "strength and conditioning",
+    "clubId": "59",
+    "classId": "unknown"
+  },
+  {
+    "club": "moorgate",
+    "time": "12:15 - 13:00",
+    "title": "yoga align",
+    "clubId": "59",
+    "classId": "unknown"
+  },
+  {
+    "club": "aldersgate",
+    "time": "07:15 - 08:00",
+    "title": "lift club",
+    "clubId": "76",
+    "classId": "unknown"
+  },
+  {
+    "club": "aldersgate",
+    "time": "08:00 - 08:45",
+    "title": "strength and conditioning",
+    "clubId": "76",
+    "classId": "unknown"
+  },
+  {
+    "club": "aldersgate",
+    "time": "12:15 - 13:00",
+    "title": "lift club",
+    "clubId": "76",
     "classId": "unknown"
   },
   {
@@ -120,22 +267,8 @@
   },
   {
     "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "sound bath",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "strength and conditioning",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "13:15 - 14:00",
-    "title": "lift club",
+    "time": "13:00 - 13:45",
+    "title": "pilates foundations",
     "clubId": "76",
     "classId": "unknown"
   },
