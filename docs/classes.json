@@ -3,27 +3,27 @@
 🔐 Navigating to login page...
 ✅ Login successful.
 📅 Navigating to timetable for wimbledon (wimbledon-worple-road)
-📦 Found 27 classes for wimbledon
+📦 Found 23 classes for wimbledon
 📅 Navigating to timetable for bank (bank)
-📦 Found 19 classes for bank
+📦 Found 7 classes for bank
 📅 Navigating to timetable for walbrook (walbrook)
-📦 Found 16 classes for walbrook
+📦 Found 8 classes for walbrook
 📅 Navigating to timetable for moorgate (moorgate)
-📦 Found 29 classes for moorgate
+📦 Found 19 classes for moorgate
 📅 Navigating to timetable for aldersgate (aldersgate)
-📦 Found 14 classes for aldersgate
+📦 Found 9 classes for aldersgate
 [
   {
     "club": "wimbledon",
     "time": "07:00 - 07:45",
-    "title": "strength and conditioning",
+    "title": "lift club",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
-    "time": "07:15 - 08:00",
-    "title": "reformer athletic",
+    "time": "07:00 - 07:45",
+    "title": "reformer align",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -37,7 +37,7 @@
   {
     "club": "wimbledon",
     "time": "09:15 - 10:00",
-    "title": "reformer align",
+    "title": "reformer athletic",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -51,7 +51,7 @@
   {
     "club": "wimbledon",
     "time": "09:30 - 10:15",
-    "title": "lift club",
+    "title": "strength and conditioning",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -64,28 +64,28 @@
   },
   {
     "club": "wimbledon",
-    "time": "09:45 - 10:15",
-    "title": "pilates express",
+    "time": "09:45 - 10:45",
+    "title": "yoga align",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
     "time": "10:15 - 11:00",
-    "title": "reformer recovery",
+    "title": "reformer align",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
     "time": "10:30 - 11:15",
-    "title": "strength and conditioning",
+    "title": "lift club",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
-    "time": "10:45 - 11:45",
+    "time": "11:00 - 11:45",
     "title": "yoga flow",
     "clubId": "408",
     "classId": "unknown"
@@ -93,21 +93,21 @@
   {
     "club": "wimbledon",
     "time": "11:15 - 12:00",
-    "title": "reformer athletic",
+    "title": "reformer align",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
-    "time": "11:20 - 12:05",
+    "time": "11:30 - 12:15",
     "title": "move club",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
-    "time": "12:15 - 13:00",
-    "title": "pilates align",
+    "time": "12:00 - 12:30",
+    "title": "pilates express",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -122,13 +122,6 @@
     "club": "wimbledon",
     "time": "13:15 - 14:00",
     "title": "reformer align",
-    "clubId": "408",
-    "classId": "unknown"
-  },
-  {
-    "club": "wimbledon",
-    "time": "14:00 - 14:45",
-    "title": "aqua",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -148,29 +141,15 @@
   },
   {
     "club": "wimbledon",
-    "time": "17:45 - 18:30",
-    "title": "lift club",
-    "clubId": "408",
-    "classId": "unknown"
-  },
-  {
-    "club": "wimbledon",
-    "time": "17:45 - 18:30",
-    "title": "yoga flow",
-    "clubId": "408",
-    "classId": "unknown"
-  },
-  {
-    "club": "wimbledon",
-    "time": "18:00 - 18:45",
+    "time": "17:30 - 18:15",
     "title": "strength and conditioning",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
-    "time": "18:15 - 19:00",
-    "title": "cycle tempo",
+    "time": "17:45 - 18:45",
+    "title": "yoga calm",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -183,22 +162,15 @@
   },
   {
     "club": "wimbledon",
-    "time": "18:45 - 19:30",
+    "time": "18:30 - 19:15",
     "title": "lift club",
-    "clubId": "408",
-    "classId": "unknown"
-  },
-  {
-    "club": "wimbledon",
-    "time": "18:45 - 19:30",
-    "title": "yoga align",
     "clubId": "408",
     "classId": "unknown"
   },
   {
     "club": "wimbledon",
     "time": "19:15 - 20:00",
-    "title": "reformer athletic",
+    "title": "reformer recovery",
     "clubId": "408",
     "classId": "unknown"
   },
@@ -206,20 +178,6 @@
     "club": "bank",
     "time": "07:15 - 08:00",
     "title": "reformer align",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "07:15 - 08:00",
-    "title": "strength and conditioning",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "07:15 - 08:00",
-    "title": "yoga flow",
     "clubId": "29",
     "classId": "unknown"
   },
@@ -240,14 +198,7 @@
   {
     "club": "bank",
     "time": "12:15 - 13:00",
-    "title": "pilates athletic",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "12:15 - 13:00",
-    "title": "reformer foundations",
+    "title": "reformer align",
     "clubId": "29",
     "classId": "unknown"
   },
@@ -255,82 +206,19 @@
     "club": "bank",
     "time": "12:15 - 13:00",
     "title": "strength and conditioning",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "12:30 - 13:15",
-    "title": "cycle power",
     "clubId": "29",
     "classId": "unknown"
   },
   {
     "club": "bank",
     "time": "13:15 - 14:00",
-    "title": "reformer align",
+    "title": "reformer recovery",
     "clubId": "29",
     "classId": "unknown"
   },
   {
     "club": "bank",
     "time": "14:15 - 15:00",
-    "title": "reformer athletic",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "16:30 - 17:15",
-    "title": "reformer align",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "17:30 - 18:15",
-    "title": "pilates athletic",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "17:30 - 18:15",
-    "title": "reformer athletic",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "17:45 - 18:30",
-    "title": "cycle power",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "17:45 - 18:30",
-    "title": "strength and conditioning",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "18:30 - 19:15",
-    "title": "reformer align",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "18:30 - 19:15",
-    "title": "yoga calm",
-    "clubId": "29",
-    "classId": "unknown"
-  },
-  {
-    "club": "bank",
-    "time": "19:30 - 20:15",
     "title": "reformer align",
     "clubId": "29",
     "classId": "unknown"
@@ -344,29 +232,8 @@
   },
   {
     "club": "walbrook",
-    "time": "06:45 - 07:30",
-    "title": "boxing bag work",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
-    "time": "07:00 - 07:45",
-    "title": "strength and conditioning",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
     "time": "07:30 - 08:15",
-    "title": "reformer align",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
-    "time": "08:30 - 09:15",
-    "title": "reformer align",
+    "title": "reformer athletic",
     "clubId": "953",
     "classId": "unknown"
   },
@@ -400,20 +267,6 @@
   },
   {
     "club": "walbrook",
-    "time": "14:15 - 15:00",
-    "title": "reformer athletic",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
-    "time": "17:30 - 18:15",
-    "title": "boxing bag work",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
     "time": "17:30 - 18:15",
     "title": "reformer align",
     "clubId": "953",
@@ -421,28 +274,7 @@
   },
   {
     "club": "walbrook",
-    "time": "18:15 - 19:00",
-    "title": "strength and conditioning",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
     "time": "18:30 - 19:15",
-    "title": "boxing bag work",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
-    "time": "18:30 - 19:15",
-    "title": "reformer athletic",
-    "clubId": "953",
-    "classId": "unknown"
-  },
-  {
-    "club": "walbrook",
-    "time": "19:30 - 20:15",
     "title": "reformer align",
     "clubId": "953",
     "classId": "unknown"
@@ -451,20 +283,6 @@
     "club": "moorgate",
     "time": "06:45 - 07:30",
     "title": "reformer align",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "06:45 - 07:30",
-    "title": "strength and conditioning",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "06:45 - 07:30",
-    "title": "swim club",
     "clubId": "59",
     "classId": "unknown"
   },
@@ -484,22 +302,8 @@
   },
   {
     "club": "moorgate",
-    "time": "07:30 - 08:15",
-    "title": "yoga align",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
     "time": "07:45 - 08:30",
-    "title": "reformer align",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "07:45 - 08:30",
-    "title": "swim club",
+    "title": "reformer athletic",
     "clubId": "59",
     "classId": "unknown"
   },
@@ -513,7 +317,7 @@
   {
     "club": "moorgate",
     "time": "10:15 - 11:00",
-    "title": "reformer align",
+    "title": "reformer athletic",
     "clubId": "59",
     "classId": "unknown"
   },
@@ -534,7 +338,7 @@
   {
     "club": "moorgate",
     "time": "12:15 - 13:00",
-    "title": "reformer athletic",
+    "title": "reformer align",
     "clubId": "59",
     "classId": "unknown"
   },
@@ -548,14 +352,7 @@
   {
     "club": "moorgate",
     "time": "12:15 - 13:00",
-    "title": "yoga foundations",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "13:15 - 14:00",
-    "title": "bodypump™",
+    "title": "yoga align",
     "clubId": "59",
     "classId": "unknown"
   },
@@ -569,92 +366,50 @@
   {
     "club": "moorgate",
     "time": "14:15 - 15:00",
+    "title": "reformer athletic",
+    "clubId": "59",
+    "classId": "unknown"
+  },
+  {
+    "club": "moorgate",
+    "time": "16:30 - 17:15",
     "title": "reformer align",
     "clubId": "59",
     "classId": "unknown"
   },
   {
     "club": "moorgate",
-    "time": "15:15 - 16:00",
-    "title": "reformer athletic",
+    "time": "17:30 - 18:15",
+    "title": "reformer align",
     "clubId": "59",
     "classId": "unknown"
   },
   {
     "club": "moorgate",
-    "time": "17:15 - 18:00",
-    "title": "reformer athletic",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "17:30 - 18:30",
+    "time": "17:30 - 18:15",
     "title": "yoga flow",
     "clubId": "59",
     "classId": "unknown"
   },
   {
     "club": "moorgate",
-    "time": "17:45 - 18:30",
-    "title": "strength and conditioning",
+    "time": "18:30 - 19:15",
+    "title": "reformer athletic",
     "clubId": "59",
     "classId": "unknown"
   },
   {
     "club": "moorgate",
-    "time": "18:00 - 18:45",
-    "title": "lift club",
+    "time": "18:30 - 19:15",
+    "title": "sound bath",
     "clubId": "59",
     "classId": "unknown"
   },
   {
     "club": "moorgate",
-    "time": "18:15 - 19:00",
-    "title": "reformer align",
+    "time": "19:30 - 20:15",
+    "title": "reformer recovery",
     "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:45 - 19:30",
-    "title": "bodypump™",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "18:45 - 19:45",
-    "title": "yoga calm",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "19:00 - 19:45",
-    "title": "lift club",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "19:15 - 20:00",
-    "title": "reformer align",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "moorgate",
-    "time": "20:15 - 21:00",
-    "title": "reformer align",
-    "clubId": "59",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "07:00 - 07:45",
-    "title": "cycle power",
-    "clubId": "76",
     "classId": "unknown"
   },
   {
@@ -666,8 +421,15 @@
   },
   {
     "club": "aldersgate",
-    "time": "08:15 - 09:00",
-    "title": "strength and conditioning",
+    "time": "12:15 - 13:00",
+    "title": "lift club",
+    "clubId": "76",
+    "classId": "unknown"
+  },
+  {
+    "club": "aldersgate",
+    "time": "12:15 - 12:45",
+    "title": "pilates express",
     "clubId": "76",
     "classId": "unknown"
   },
@@ -680,50 +442,22 @@
   },
   {
     "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "strength and conditioning",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "12:15 - 13:00",
-    "title": "yoga align",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
     "time": "13:15 - 14:00",
-    "title": "lift club",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "13:15 - 14:00",
-    "title": "reformer foundations",
+    "title": "reformer align",
     "clubId": "76",
     "classId": "unknown"
   },
   {
     "club": "aldersgate",
     "time": "17:15 - 18:00",
-    "title": "reformer foundations",
+    "title": "reformer align",
     "clubId": "76",
     "classId": "unknown"
   },
   {
     "club": "aldersgate",
-    "time": "17:30 - 18:15",
+    "time": "17:45 - 18:30",
     "title": "lift club",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
-    "time": "18:00 - 19:00",
-    "title": "yoga flow",
     "clubId": "76",
     "classId": "unknown"
   },
@@ -736,15 +470,8 @@
   },
   {
     "club": "aldersgate",
-    "time": "18:30 - 19:15",
-    "title": "strength and conditioning",
-    "clubId": "76",
-    "classId": "unknown"
-  },
-  {
-    "club": "aldersgate",
     "time": "19:15 - 20:00",
-    "title": "reformer athletic",
+    "title": "reformer align",
     "clubId": "76",
     "classId": "unknown"
   }
